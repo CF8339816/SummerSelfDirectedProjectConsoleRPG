@@ -1,3 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SummerSelfDirectedProjectConsoleRPG
+
 public class Character
 {
 private string _type;
@@ -11,17 +19,13 @@ public string Magic {get; set;}
 public int Strength {get; set;}
 public int Attack {get; set;}
 
-
 public int Mana {get; set;} 
 public int XP {get; set;} 
-
 
 public ConsoleColor _color;
 public char _symbol { get; protected set; }
 
-
 public int ArcType {get; set;}
-
 
 public int PlHpPerLevBonus {get; set;}
 public int Level {get; set;}
@@ -31,9 +35,19 @@ public int ArmorValue {get; set;}
 public int SpellsPerLevel {get; set;}
 public string NameUsed {get; set;}
 
+/*
+    private string DefaultName  { get; set;}
+    public int HpBonusPerLevel  { get; set;}
+    public int MaxSpellLevel1  { get; set;}
+    public int MaxSpellLevel2  { get; set;}
+    public string MagicType1  { get; set;}
+    public string MagicType2  { get; set;}
+    public int XPtoLevelMultiplier  { get; set;}
+    public string ArmorType  { get; set;}
+    public int ArmorBonus { get; set;}
+*/
 
-
-public Character(string type, string name, int hp, int speed, int dex, int ac, string magic, int strength, char symbol, ConsoleColor color, int attack, 
+    public Character(string type, string name, int hp, int speed, int dex, int ac, string magic, int strength, char symbol, ConsoleColor color, int attack, 
  int mana, string nameUsed, string arcType, int plHpPerLevBonus, int level, int mana, int xp, int armorValue, int spellsPerLevel)
 {
 _type = type;

@@ -1,4 +1,12 @@
-public class PC : Character
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SummerSelfDirectedProjectConsoleRPG
+	
+	public class PC : Character
 {
 
 
@@ -17,6 +25,7 @@ public PC(string type, string name, int hp, int speed, int dex, int ac, string m
 {
 	
 }
+
 static void (NameMyCharacter)
 {
 Console WriteLine ("Would you like to name your character (choice 1) or use default (choice 2)?")
