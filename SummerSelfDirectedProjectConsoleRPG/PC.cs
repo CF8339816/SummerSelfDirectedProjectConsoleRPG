@@ -10,7 +10,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 	public class PC : Character
 {
 
-	public int pcHp = 100;
+	public int PcHp = 100;
 	public static int plXP = 0;
 	public static int plLevel = 0;
 
