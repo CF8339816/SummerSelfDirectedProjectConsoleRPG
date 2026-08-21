@@ -40,6 +40,7 @@ public void (ChooseMyClass)
     switch (CharacterRole)
     {
         case CharRole.Paladin:
+            
             arcType = Paladin;
             Console.WriteLine("You have chosen to be a Paladin, 'Stalward and true... With great power comes...SMITE!!!!!'");
             break;
@@ -64,7 +65,7 @@ public void (ChooseMyClass)
             Console.WriteLine("You have chosen to be a Ranger, 'What do you see with your Elvish Eyes.'");
             break;
         
-        case CharRole.Sorcerer
+        case CharRole.Sorcerer;
             arcType = Sorcerer
 
             Console.WriteLine("You have chosen to be a Sorcerer, 'Phenomional Cosmic Power...About to be sued by Disney...'");

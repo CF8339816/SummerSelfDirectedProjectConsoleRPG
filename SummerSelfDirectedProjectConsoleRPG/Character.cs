@@ -19,7 +19,7 @@ namespace SummerSelfDirectedProjectConsoleRPGusing
         public int Strength { get; set; }
         public int Attack { get; set; }
 
-        public
+        public string Species { get; set; }   
         public int Mana { get; set; }
         public int XP { get; set; }
 
@@ -48,12 +48,12 @@ namespace SummerSelfDirectedProjectConsoleRPGusing
             public int ArmorBonus { get; set;}
         */
 
-        public Character(string type, string name, int hp, int speed, int dex, int ac, string magic, int strength, char symbol, 
-            ConsoleColor color, int attack,
-     int mana, string nameUsed, string arcType, int plHpPerLevBonus, int level, int xp, int armorValue, int spellsPerLevel)
+        public Character(string type, string name, int hp, int speed, int dex, int ac, string magic, int strength, char symbol,ConsoleColor color, int attack,int mana,
+                        string nameUsed, string species, string arcType, int plHpPerLevBonus, int level, int xp, int armorValue, int spellsPerLevel)
         {
             _type = type;
             Name = name;
+            Species = species;
             Hp = hp;
             Speed = speed;
             Dex = dex;
@@ -64,11 +64,8 @@ namespace SummerSelfDirectedProjectConsoleRPGusing
             _symbol = symbol;
             _color = color;
 
-
-
             PlHpPerLevBonus = plHpPerLevBonus;
             ArcType = arcType;
-
 
             Level = level;
             Mana = mana;
