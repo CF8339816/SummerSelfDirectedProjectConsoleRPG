@@ -44,16 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArcType.cs" />
-    <Compile Include="Bard.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="Cleric.cs" />
-    <Compile Include="Paladin.cs" />
     <Compile Include="PC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ranger.cs" />
-    <Compile Include="Rogue.cs" />
-    <Compile Include="Sorcerer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

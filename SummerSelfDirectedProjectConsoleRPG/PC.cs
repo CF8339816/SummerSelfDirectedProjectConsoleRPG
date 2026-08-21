@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 namespace SummerSelfDirectedProjectConsoleRPG
 
 
-	public class PC : Character
+	public class PC 
 {
 
-	public int PcHp = 100;
-	public static int plXP = 0;
+	private const int PcHp = 100;
+    public string Name { get; }
+
+    public static int plXP = 0;
 	public static int plLevel = 0;
 
 	public static string arcType = ArcType.arcType;

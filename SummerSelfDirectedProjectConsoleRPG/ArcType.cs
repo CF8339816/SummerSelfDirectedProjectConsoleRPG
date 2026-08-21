@@ -28,10 +28,10 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
 
-        private ArchType(string name, int HpBPL, int atHp, string species, int maxSL1, int maxSL2, string magType1, string magType2, int xp2LMulti, string Armor, int ArBonus)
+        private ArchType(string dName, int HpBPL, int atHp, string species, int maxSL1, int maxSL2, string magType1, string magType2, int xp2LMulti, string Armor, int ArBonus)
         {
 
-            DefaultName = name;
+            DefaultName = dName;
             HpBonusPerLevel = HpBPL;
             AtHp = atHp;
             Species = species;
@@ -48,15 +48,14 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         }
 
+        public static ArchType Paladin => new ArchType("Medrin", 5, 50, "DragonBorn", 3, 0, "Holy", "N/A", 13, "Plate", 5);
+        public static ArchType Bard => new ArchType("Tessa", 2, 35, "Tiefling", 3, 6, "Holy", "Illusion", 11, "Leather", 2);
+        public static ArchType Cleric => new ArchType("Fray", 4, 40, "Dwarf", 6, 6, "Holy", "Healing", 13, "ChainMail & Shield", 4);
+        public static ArchType Sorcerer => new ArchType("Garth", 1, 10, "Human", 6, 6, "Arcane ", "Elemental", 12, "Cloth", 1);
+        public static ArchType Ranger => new ArchType("Nae'O'mii", 3, 30, "Elf", 3, 5, "Nature", "N/A", 10, "Leather & Buckler", 3);
+        public static ArchType Rogue => new ArchType("Kayleigh", 2, 20, "Halfling", 4, 0, "Illusion", "N/A", 12, "leather", 2);
 
 
     }
 }
-
-
-
-
-
-
-
 
