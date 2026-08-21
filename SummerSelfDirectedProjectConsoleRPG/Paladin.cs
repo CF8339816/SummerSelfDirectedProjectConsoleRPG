@@ -12,7 +12,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         private string DefaultName = "Medrin";
         public int HpBonusPerLevel = 5;
         public int AtHp = 50;
-
+        public string species = " DragonBorn";
 
         public int MaxSpellLevel1 = 3;
         public int MaxSpellLevel2 = 0;

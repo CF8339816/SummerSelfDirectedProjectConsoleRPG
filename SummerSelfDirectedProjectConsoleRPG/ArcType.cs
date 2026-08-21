@@ -41,33 +41,33 @@ public void (ChooseMyClass)
     {
         case CharRole.Paladin:
             arcType = Paladin;
-            Console.WriteLine("You have chosen to be a Paladin, Stalward and true.");
+            Console.WriteLine("You have chosen to be a Paladin, 'Stalward and true... With great power comes...SMITE!!!!!'");
             break;
 
         case CharRole.Bard:
             arcType = Bard;
-            Console.WriteLine("You have chosen to be a Paladin, Stalward and true.");
+            Console.WriteLine("You have chosen to be a Bard, 'I'm not the problem.... the story this would make is the problem...'");
             break;
         
         case CharRole.Cleric:
             arcType = Cleric;
-            Console.WriteLine("You have chosen to be a Paladin, Stalward and true.");
+            Console.WriteLine("You have chosen to be a Cleric, 'Oh Lawd give me the strngth to heal these nitwits....'");
             break;
        
         case CharRole.Rogue:
             arcType = Rogue;
-            Console.WriteLine("You have chosen to be a Paladin, Stalward and true.");
+            Console.WriteLine("You have chosen to be a Rogue , 'Sneaky, sneaky  Suggah...'");
             break;
        
         case CharRole.Ranger:
             arcType = Ranger;
-            Console.WriteLine("You have chosen to be a Paladin, Stalward and true.");
+            Console.WriteLine("You have chosen to be a Ranger, 'What do you see with your Elvish Eyes.'");
             break;
         
         case CharRole.Sorcerer
             arcType = Sorcerer
 
-            Console.WriteLine("You have chosen to be a Paladin, Stalward and true.");
+            Console.WriteLine("You have chosen to be a Sorcerer, 'Phenomional Cosmic Power...About to be sued by Disney...'");
             break;
     }
 }

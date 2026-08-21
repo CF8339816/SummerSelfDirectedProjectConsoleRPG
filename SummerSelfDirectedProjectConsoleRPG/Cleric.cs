@@ -12,6 +12,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
         private string DefaultName = "Fray";
         public int HpBonusPerLevel = 4;
          public int AtHp = 40;
+        public string species = "Dwarf";
+
         public int MaxSpellLevel1 = 6;
         public int MaxSpellLevel2 = 6;
         public string MagicType1 = "Healing";

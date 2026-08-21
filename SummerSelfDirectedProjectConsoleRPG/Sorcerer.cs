@@ -11,6 +11,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
             private string DefaultName = "Kayleah";
             public int HpBonusPerLevel = 2;
             public int AtHp = 10;
+        public string species = "Human ";
+
         public int MaxSpellLevel1 = 6;
             public int MaxSpellLevel2 = 6;
             public string MagicType1 = "Fire ";

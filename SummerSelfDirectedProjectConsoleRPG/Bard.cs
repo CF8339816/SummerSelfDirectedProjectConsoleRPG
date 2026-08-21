@@ -14,6 +14,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
         private string DefaultName = "Tessa";
         public int HpBonusPerLevel = 3;
         public int AtHp = 30;
+        public string species = "Tiefling ";
+
         public int MaxSpellLevel1 = 3;
         public int MaxSpellLevel2 = 5;
         public string MagicType1 = "Healing";

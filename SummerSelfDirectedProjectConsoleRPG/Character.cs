@@ -19,6 +19,7 @@ namespace SummerSelfDirectedProjectConsoleRPGusing
         public int Strength { get; set; }
         public int Attack { get; set; }
 
+        public
         public int Mana { get; set; }
         public int XP { get; set; }
 

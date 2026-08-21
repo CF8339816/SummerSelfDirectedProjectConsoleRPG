@@ -9,8 +9,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 	class Program
 	{
-		public string NameUsed;
-		public string name = NameUsed;
+		public string nameUsed;
+		public string name;
 
 	public static int hp = Character.hp + PC.PcHp + ArcType.AtHp;
 	 public static PC myPC = newPC(type, " ", hp, speed, dex, ac, magic, strength, symbol, ConsoleColor color, attack,
@@ -19,7 +19,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 		static void Main()
 		{
-
+			
 			PC.(NameMyCharacter);
 
 
@@ -34,16 +34,16 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         static void NameMyCharacter()
 {
-Console.WriteLine("Would you like to name your character (choice 1) or use default (choice 2)?")
-string choiceConsole.ReadLine;
-if (Console.ReadLine = "1" )
+			Console.WriteLine("Would you like to name your character (choice 1) or use default (choice 2)?");
+int choice = Console.ReadLine();
+if (choice == 1 )
 {
 	  Console.WriteLine("What is your character's name");
        Console.ReadLine();   
             nameUsed = Console.ReadLine();
 			
 }
-else if (Console.ReadLine == "2" )
+else if (choice == 2 )
 {
 	nameUsed = Paladin.defaultName;
 }
