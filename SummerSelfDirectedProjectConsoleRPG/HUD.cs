@@ -26,12 +26,12 @@ namespace SummerSelfDirectedProjectConsoleRPG
             
             {
                 Console.WriteLine($"Would you like to name your character (choice 1) or use default (choice 2){ArchType.dName}?");
-                int choice = int.Parse(Console.ReadLine());
+                int choice = Convert.ToInt32(Console.ReadLine());
                 if (choice == 1)
                 {
                     Console.WriteLine("What is your character's name");
                      Console.ForegroundColor = ConsoleColor.Blue;
-                    Program.nameUsed = Console.ReadLine();
+                    Program nameUsed = Console.ReadLine();
                     // Program nameUsed = Console.ReadLine();
                    
                  
@@ -45,7 +45,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 }
                 else if (choice == 2)
                 {
-                    Program nameUsed = ArchType.dName;
+                    Program nameUsed = PC.arcJob.ArchType.dName;
                 }
                 else
                 {
@@ -106,34 +106,34 @@ namespace SummerSelfDirectedProjectConsoleRPG
             Console.WriteLine("Please choose a character Species from the following list:\n 1) DragonKin 2) DaemonKyne, 3) Dwarf, 4) Elf, 5) Human, 6) SmallFolk.\n please type a number between 1-6");
             Console.ReadLine();
 
-            switch (ArchSpecies)
+            switch (speciesUsed)
             {
-                case ArchSpecies.DragonKin:
+                case speciesUsed.DragonKin:
                     PC.arcSpecies = DragonKin;
                     Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
                     break;
 
-                case ArchSpecies.DaemonKyne:
+                case speciesUsed.DaemonKyne:
                     PC.arcSpecies = DaemonKyne;
                     Console.WriteLine("You have chosen to be a DaemonKyne,\n 'My parents? .....Well... It's complicated.'");
                     break;
 
-                case ArchSpecies.Dwarf:
+                case speciesUsed.Dwarf:
                     PC.arcSpecies = Dwarf;
                     Console.WriteLine("You have chosen to be a Dwarf,\n 'If ye Likem Hairy...I got whatcha want!'");
                     break;
 
-                case ArchSpecies.Elf:
+                case speciesUsed.Elf:
                     PC.arcSpecies = Elf;
                     Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not wan to know...'");
                     break;
 
-                case ArchSpecies.Human:
+                case speciesUsed.Human:
                     PC.arcSpecies = Human;
                     Console.WriteLine("You have chosen to be a Human,\n 'I don't know why other Species get nervouse when I'm around...'");
                     break;
 
-                case ArchSpecies.SmallFolk:
+                case speciesUsed.SmallFolk:
                     PC.arcSpecies = SmallFolk;
                     Console.WriteLine("You have chosen to be a SmallFolk,\n 'Hey... mind were you step please...no?.......YOINK!'");
                     break;

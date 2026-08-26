@@ -9,76 +9,40 @@ namespace SummerSelfDirectedProjectConsoleRPG
 {
     public class Character
     {
-        private string _type;
-
-        public string Name { get; set; }
-        public int Hp { get; set; }
+        private string _type { get; set; }
+        public string Name { get; set; }        
+        public int Strength { get; set; }
         public int Speed { get; set; }
         public int Dex { get; set; }
-        public int Ac { get; set; }
-        public string Magic { get; set; }
-        public int Strength { get; set; }
-        public int Attack { get; set; }
-
-        public string Species { get; set; }   
-        public int Mana { get; set; }
-        public int XP { get; set; }
+        public int BaseAC { get; set; }
+        public int BaseHp { get; set; }
+        public int BaseAttack { get; set; }
+        public int BaseMana { get; set; }
+       
 
         public ConsoleColor _color;
         public char _symbol { get; protected set; }
 
-        public string ArcType { get; set; }
-
-        public int PlHpPerLevBonus { get; set; }
-        public int Level { get; set; }
-      
-
-        public int ArmorValue { get; set; }
-        public int SpellsPerLevel { get; set; }
-        public string NameUsed { get; set; }
-
-        /*
-            private string DefaultName  { get; set;}
-            public int HpBonusPerLevel  { get; set;}
-            public int MaxSpellLevel1  { get; set;}
-            public int MaxSpellLevel2  { get; set;}
-            public string MagicType1  { get; set;}
-            public string MagicType2  { get; set;}
-            public int XPtoLevelMultiplier  { get; set;}
-            public string ArmorType  { get; set;}
-            public int ArmorBonus { get; set;}
-        */
-
-        public Character(string type, string name, int hp, int speed, int dex, int ac, string magic, int strength, char symbol,ConsoleColor color, int attack,int mana,
-                        string nameUsed, string species, string arcType, int plHpPerLevBonus, int level, int xp, int armorValue, int spellsPerLevel)
+    
+            
+        public Character(string type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk,int baseMana, char symbol, ConsoleColor color)
         {
             _type = type;
             Name = name;
-            Species = species;
-            Hp = hp;
+          
+            Strength = strength;
             Speed = speed;
             Dex = dex;
-            Ac = ac;
-            Magic = magic;
-            Strength = strength;
-            Attack = attack;
+           
+            BaseAC = baseAC;
+            BaseHp = baseHp;
+            BaseAttack = baseAtk;
+            BaseMana = baseMana;
+
             _symbol = symbol;
             _color = color;
 
-            PlHpPerLevBonus = plHpPerLevBonus;
-            ArcType = arcType;
-
-            Level = level;
-            Mana = mana;
-            XP = xp;
-            ArmorValue = armorValue;
-            SpellsPerLevel = spellsPerLevel;
-            NameUsed = nameUsed;
-
-
-
-
-
+       
         }
     } 
 }

@@ -11,38 +11,40 @@ using static SummerSelfDirectedProjectConsoleRPG.ArchType;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 
-{ 
+{
 
     public class PC : Character
     {
 
         private const int PcHp = 100;
-        public string Name { get; }
+        //public string Name { get; }
 
         public static int plXP = 0;
         public static int plLevel = 0;
 
-        public int MaxHP { get; }
-        public ArchType ArcJob { get; }
-        public ArchSpecies ArcSpecies { get; } 
 
         public int ArmorClass { get; }
+        public int MaxHP { get; }
+
+
+        public ArchType ArcJob { get; }
+        public ArchSpecies ArcSpecies { get; } 
       
 
-        public static string nameUsed;
+     
 
-        public PC(string name, ArchType arcJob, ArchSpecies arcSpecies, int maxHP, int maxAC, int speed, int dex, int ac, string magic, int strength, char symbol, ConsoleColor color, int attack,
-            int mana, string nameUsed, string arcType, int plHpPerLevBonus, int level, int armorValue, int spellsPerLevel)
+        public PC(string type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, ArchType arcJob, ArchSpecies arcSpecies, int maxHP, int maxAC, int level, int XP)
 
 
         {
-            Name = name;
+            //Name = name;
             ArcJob = arcJob;
-            ArcSpecies = arcSpecies;        
+            ArcSpecies = arcSpecies;
             ArmorClass = maxAC;
             MaxHP = maxHP;
+            plXP = XP;
+            plLevel = level;
         }
 
     }
-
 }

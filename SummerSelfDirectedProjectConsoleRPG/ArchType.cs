@@ -13,6 +13,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
     {
 
         public string DefaultName { get; }
+        public string DefaultSpecies { get; }
         public int HpBonusPerLevel { get; }
         public int AtHp { get; }
         public string Species { get; }
