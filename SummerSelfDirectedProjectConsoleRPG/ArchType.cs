@@ -28,13 +28,13 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
 
-        private ArchType(string dName, int HpBPL, int atHp, string species, int maxSL1, int maxSL2, string magType1, string magType2, int xp2LMulti, string Armor, int ArBonus)
+        private ArchType(string dName, int HpBPL, int atHp, string defSpecies, int maxSL1, int maxSL2, string magType1, string magType2, int xp2LMulti, string Armor, int ArBonus)
         {
 
             DefaultName = dName;
             HpBonusPerLevel = HpBPL;
             AtHp = atHp;
-            Species = species;
+            DefaultSpecies = defSpecies;
             MaxSpellLevel1 = maxSL1;
             MaxSpellLevel2 = maxSL2;
             MagicType1 = magType1;

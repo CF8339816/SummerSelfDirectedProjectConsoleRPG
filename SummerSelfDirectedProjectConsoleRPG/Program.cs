@@ -13,9 +13,9 @@ namespace SummerSelfDirectedProjectConsoleRPG
 	class Program
 	{
 		public string nameUsed;
-		
+        public string speciesUsed;
         public string Job;
-        public string Species;
+       
         public static int PlayerHp;
         public static int PlayerAC;
         public static int MagicACBonus;
@@ -47,7 +47,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
         static void Main()
 		{
             HUD.ChooseMyClass();
+            HUD.ChooseMySpecies();
 			HUD.NameMyCharacter();
+            ArchType = PC.arcJob;
+            ArchSpecies = PC.arcSpecies; 
+
             PlayerHp = Character.hp + PC.PcHp + ArchType.AtHp;
             PlayerAC = ArchSpecies.ACbonusSpecies + ArchType.ArmorBonus + MagicACBonus;
             PC.name = nameUsed;

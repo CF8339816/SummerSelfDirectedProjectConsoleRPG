@@ -23,19 +23,22 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static int plLevel = 0;
 
         public int MaxHP { get; }
+        public ArchType ArcJob { get; }
+        public ArchSpecies ArcSpecies { get; } 
 
         public int ArmorClass { get; }
-        public ArchType ArcJob { get; }
+      
 
         public static string nameUsed;
 
-        public PC(string name, ArchType arcJob, int maxHP, int maxAC, int speed, int dex, int ac, string magic, int strength, char symbol, ConsoleColor color, int attack,
+        public PC(string name, ArchType arcJob, ArchSpecies arcSpecies, int maxHP, int maxAC, int speed, int dex, int ac, string magic, int strength, char symbol, ConsoleColor color, int attack,
             int mana, string nameUsed, string arcType, int plHpPerLevBonus, int level, int armorValue, int spellsPerLevel)
 
 
         {
             Name = name;
             ArcJob = arcJob;
+            ArcSpecies = arcSpecies;        
             ArmorClass = maxAC;
             MaxHP = maxHP;
         }
