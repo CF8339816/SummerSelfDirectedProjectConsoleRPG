@@ -37,7 +37,10 @@ namespace SummerSelfDirectedProjectConsoleRPG
             HUD.ChooseMySpecies();
 			HUD.NameMyCharacter();
 
-            PC Player = new PC("PC", HUD.nameChoice, 11, 11, 10, 7, 2, 12, '&', ConsoleColor.Blue,/* arcJob, arcSpecies,*/ Program.PlayerHp, Program.PlayerAC, 1, 0);
+            PC Player = new PC("Player", HUD.nameChoice, 11, 11, 10, 7, 2, 12, '&', ConsoleColor.Blue, Program.PlayerHp, HUD.jobType, HUD.SpeciesChoice, Program.PlayerAC, 1,0 );
+          
+
+           // PC Player = new PC("PC", HUD.nameChoice, 11, 11, 10, 7, 2, 12, '&', ConsoleColor.Blue,/* arcJob, arcSpecies,*/ Program.PlayerHp, Program.PlayerAC, 1, 0);
 
 
 
@@ -50,6 +53,13 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
 
+            Console.Clear();
+            Console.WriteLine($"--- Character Creation Complete ---");
+            Console.WriteLine($"Name: {Player.Name} ({Player.ArcSpecies.Vision} Vision)");
+            Console.WriteLine($"Class: {Player.ArcJob.DefaultName} Archetype");
+            Console.WriteLine($"HP: {Player.MaxHP} | AC: {Player.ArmorClass}");
+            Console.WriteLine($"Spells Known: {Player.ArcSpecies.BonusSpellsSpecies1}, {Player.ArcSpecies.BonusSpellsSpecies2}");
+            Console.WriteLine("-----------------------------------\n");
 
 
 

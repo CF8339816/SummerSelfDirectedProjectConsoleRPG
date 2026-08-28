@@ -29,18 +29,20 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         public ArchType ArcJob = HUD.jobType;
         public ArchSpecies ArcSpecies = HUD.SpeciesChoice;
-      
 
-     
 
-        public PC(string type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, /*ArchType arcJob, ArchSpecies arcSpecies,*/ int maxHP, int maxAC, int level, int XP):
-            base("PC", HUD.nameChoice, 11,11,10,7,2,12, symbol= '&', color = ConsoleColor.Blue)//, arcJob, arcSpecies, Program.PlayerHp, Program.PlayerAC, 0,0)
+
+        public PC(string _type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, ArchType arcJob, ArchSpecies arcSpecies, int maxHP, int maxAC, int level, int XP)
+           : base("PC", name, strength, speed, dex, baseAC, baseHp, baseAtk, baseMana, symbol, color)
+
+        //public PC(string type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, ArchType arcJob, ArchSpecies arcSpecies, int maxHP, int maxAC, int level, int XP):
+        //    base("PC", HUD.nameChoice, 11,11,10,7,2,12, symbol= '&', color = ConsoleColor.Blue)//, arcJob, arcSpecies, Program.PlayerHp, Program.PlayerAC, 0,0)
 
 
         {
             //Name = name;
-            //ArcJob = arcJob;
-            //ArcSpecies = arcSpecies;
+            ArcJob = arcJob;
+            ArcSpecies = arcSpecies;
             ArmorClass = maxAC; 
             MaxHP = maxHP;
             plXP = XP;
