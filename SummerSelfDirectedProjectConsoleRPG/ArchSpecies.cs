@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
-
+using static SummerSelfDirectedProjectConsoleRPG.ArchType;
+using static SummerSelfDirectedProjectConsoleRPG.PC;
+using static SummerSelfDirectedProjectConsoleRPG.Program;
 
 
 namespace SummerSelfDirectedProjectConsoleRPG

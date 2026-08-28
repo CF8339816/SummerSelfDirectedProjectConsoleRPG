@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
 using static SummerSelfDirectedProjectConsoleRPG.ArchType;
 using static SummerSelfDirectedProjectConsoleRPG.PC;
+using static SummerSelfDirectedProjectConsoleRPG.Program;
+
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
@@ -20,7 +24,9 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static int PlayerAC;
         public static int MagicACBonus;
         public static int MaxNameLLength = 15;
-
+        public ArchType ArchType = HUD.jobType;
+        public ArchSpecies ArchSpecies = HUD.SpeciesChoice;
+        public static PC Player => new PC("PC", HUD.nameChoice, 11, 11, 10, 7, 2, 12, symbol: '&', color: ConsoleColor.Blue, arcJob, arcSpecies, Program.PlayerHp, Program.PlayerAC, 0, 0)
 
 
         public static bool isPlaying = true;
@@ -31,13 +37,13 @@ namespace SummerSelfDirectedProjectConsoleRPG
             HUD.ChooseMyClass();
             HUD.ChooseMySpecies();
 			HUD.NameMyCharacter();
-            //ArchType = PC.arcJob;
-            //ArchSpecies = PC.arcSpecies; 
+             
 
             PlayerHp = Character.baseHp + PC.PcHp + ArchType.atHp;
-            PlayerAC = ArchSpecies.ACbonusSpecies + ArchType.ArmorBonus + MagicACBonus;
-           
-          
+            PlayerAC =PC.arcSpecies.ACbonusSpecies + PC.arcType.ArmorBonus + MagicACBonus;
+            //PlayerAC = ArchSpecies.arcSpecies.ACbonusSpecies + ArchType.ArmorBonus + MagicACBonus;
+
+
 
 
 
