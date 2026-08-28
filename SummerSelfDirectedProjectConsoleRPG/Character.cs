@@ -9,7 +9,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 {
     public class Character
     {
-        private string _type { get; set; }
+        public string _type { get; set; }
         public string Name { get; set; }        
         public int Strength { get; set; }
         public int Speed { get; set; }

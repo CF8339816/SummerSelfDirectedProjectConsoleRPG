@@ -12,9 +12,9 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 	class Program
 	{
-		public string nameUsed;
-        public string speciesUsed;
-        public string Job;
+		//public string nameUsed = HUD.nameChoice;
+        //public string speciesUsed = PC.ArcJob;
+        //public string Job;
        
         public static int PlayerHp;
         public static int PlayerAC;
@@ -25,39 +25,19 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         public static bool isPlaying = true;
 
-        //public ArchType ArchType(" ", 5, 50, " ", 3, 0, "Holy", "N/A", 13, "Plate", 5)
-
-
-
-        //public static Player player = new Player(" ", 3, 3, plaAtkUP, '!', plaMaxHP, ConsoleColor.Blue, (1, 55), (1, 24));
-        //public static List<EnemyLeader> enemiesMap1 = new List<EnemyLeader>();
-        //public static List<EnemyLeader> enemiesMap2 = new List<EnemyLeader>();
-        //public static List<EnemyLeader> enemiesMap3 = new List<EnemyLeader>();
-        //public static List<EnemyRiders> enemyRiderList = new List<EnemyRiders>();
-        //public static LoadMap map = new LoadMap();
-        //public static Dictionary<int, List<(int x, int y)>> MapTreasureRegistry = new Dictionary<int, List<(int x, int y)>>();// dictionary set up to track treasure per map to prevent respawn when going back to map after leaving 
-        //public static Dictionary<int, List<(int x, int y)>> MapCaptiveRegistry = new Dictionary<int, List<(int x, int y)>>();// dictionary set up to track Captives per map to prevent respawn when going back to map after leaving 
-        //public static Dictionary<int, List<(int x, int y)>> MapOrbRegistry = new Dictionary<int, List<(int x, int y)>>();
-        //public static Dictionary<int, List<(int x, int y)>> MapPeonRegistry = new Dictionary<int, List<(int x, int y)>>();
-        //public static bool isPlaying = true;
-
-        //public static bool isAlly = false; //sets bool to check for other allies in movement path
-
-        // ArchType(" ", 5, 50, " ", 3, 0, "Holy", "N/A", 13, "Plate", 5)
+       
         static void Main()
 		{
             HUD.ChooseMyClass();
             HUD.ChooseMySpecies();
 			HUD.NameMyCharacter();
-            ArchType = PC.arcJob;
-            ArchSpecies = PC.arcSpecies; 
+            //ArchType = PC.arcJob;
+            //ArchSpecies = PC.arcSpecies; 
 
-            PlayerHp = Character.hp + PC.PcHp + ArchType.AtHp;
+            PlayerHp = Character.baseHp + PC.PcHp + ArchType.atHp;
             PlayerAC = ArchSpecies.ACbonusSpecies + ArchType.ArmorBonus + MagicACBonus;
-            PC.name = nameUsed;
-            PC.maxAC =PlayerAC;
-            PC.maxHP =PlayerHp; 
-
+           
+          
 
 
 
@@ -65,48 +45,67 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
             while (isPlaying)
             {
-                //        HUD.Instructions();
-                //        player._name =Name;
-                //        player._attack =plaAtkUP;
-                //       PC.profession = arcJob;
-
-
-
-                //        int plX = 0, plY = 0;
-                //ConsoleKey input = Console.ReadKey(true).Key;
-                //        // move player with W,A,S,D or optional arrow keys 
-                //        if (input == ConsoleKey.LeftArrow) plX = -1;
-                //        if (input == ConsoleKey.A) plX = -1;
-                //        if (input == ConsoleKey.RightArrow) plX = 1;
-                //        if (input == ConsoleKey.D) plX = 1;
-                //        if (input == ConsoleKey.UpArrow) plY = -1;
-                //        if (input == ConsoleKey.W) plY = -1;
-                //        if (input == ConsoleKey.DownArrow) plY = 1;
-                //        if (input == ConsoleKey.S) plY = 1;
-
-                //        if (input == ConsoleKey.Q) isPlaying = false; //Quit the 'is playing' loop
-                //        HUD.ClearMessage();
-                //        player.Move(plX, plY);
-                //        Treasure.CheckTreasureCollection();
-                //        Captive.CheckCapCollection();
-                //        PowerOrb.CheckOrbCollection();
-                //        Peons.CheckPeonCollection(); 
-
-
-
-
-
-
-
-
+               
 
             }
 
         }
         
-        
-
-
-
 	}
 }
+
+
+
+
+//public ArchType ArchType(" ", 5, 50, " ", 3, 0, "Holy", "N/A", 13, "Plate", 5)
+
+
+
+//public static Player player = new Player(" ", 3, 3, plaAtkUP, '!', plaMaxHP, ConsoleColor.Blue, (1, 55), (1, 24));
+//public static List<EnemyLeader> enemiesMap1 = new List<EnemyLeader>();
+//public static List<EnemyLeader> enemiesMap2 = new List<EnemyLeader>();
+//public static List<EnemyLeader> enemiesMap3 = new List<EnemyLeader>();
+//public static List<EnemyRiders> enemyRiderList = new List<EnemyRiders>();
+//public static LoadMap map = new LoadMap();
+//public static Dictionary<int, List<(int x, int y)>> MapTreasureRegistry = new Dictionary<int, List<(int x, int y)>>();// dictionary set up to track treasure per map to prevent respawn when going back to map after leaving 
+//public static Dictionary<int, List<(int x, int y)>> MapCaptiveRegistry = new Dictionary<int, List<(int x, int y)>>();// dictionary set up to track Captives per map to prevent respawn when going back to map after leaving 
+//public static Dictionary<int, List<(int x, int y)>> MapOrbRegistry = new Dictionary<int, List<(int x, int y)>>();
+//public static Dictionary<int, List<(int x, int y)>> MapPeonRegistry = new Dictionary<int, List<(int x, int y)>>();
+//public static bool isPlaying = true;
+
+//public static bool isAlly = false; //sets bool to check for other allies in movement path
+
+// ArchType(" ", 5, 50, " ", 3, 0, "Holy", "N/A", 13, "Plate", 5)
+
+
+
+
+
+
+
+//        HUD.Instructions();
+//        player._name =Name;
+//        player._attack =plaAtkUP;
+//       PC.profession = arcJob;
+
+
+
+//        int plX = 0, plY = 0;
+//ConsoleKey input = Console.ReadKey(true).Key;
+//        // move player with W,A,S,D or optional arrow keys 
+//        if (input == ConsoleKey.LeftArrow) plX = -1;
+//        if (input == ConsoleKey.A) plX = -1;
+//        if (input == ConsoleKey.RightArrow) plX = 1;
+//        if (input == ConsoleKey.D) plX = 1;
+//        if (input == ConsoleKey.UpArrow) plY = -1;
+//        if (input == ConsoleKey.W) plY = -1;
+//        if (input == ConsoleKey.DownArrow) plY = 1;
+//        if (input == ConsoleKey.S) plY = 1;
+
+//        if (input == ConsoleKey.Q) isPlaying = false; //Quit the 'is playing' loop
+//        HUD.ClearMessage();
+//        player.Move(plX, plY);
+//        Treasure.CheckTreasureCollection();
+//        Captive.CheckCapCollection();
+//        PowerOrb.CheckOrbCollection();
+//        Peons.CheckPeonCollection(); 

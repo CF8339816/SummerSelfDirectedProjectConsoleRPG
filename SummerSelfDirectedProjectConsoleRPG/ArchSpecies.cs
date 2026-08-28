@@ -9,7 +9,7 @@ using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
-    internal class ArchSpecies
+    public class ArchSpecies
 
     {
         public string Vision { get; }
