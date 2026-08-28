@@ -17,6 +17,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
     {
         public string Vision { get; }
+       
         public int HpBonusSpecies { get; }
         public string BonusSpellsSpecies1 { get; }
         public string BonusSpellsSpecies2 { get; }
@@ -24,10 +25,10 @@ namespace SummerSelfDirectedProjectConsoleRPG
       
 
 
-        private ArchSpecies(string vision, int HpBspecies, string bonusSpellsSpecies1, string bonusSpellsSpecies2, int acBonusSpecies)
+        private ArchSpecies(string vision,  int HpBspecies, string bonusSpellsSpecies1, string bonusSpellsSpecies2, int acBonusSpecies)
         {
 
-           Vision = vision;
+            Vision = vision;
             HpBonusSpecies = HpBspecies;
             BonusSpellsSpecies1 = bonusSpellsSpecies1;
             BonusSpellsSpecies2 = bonusSpellsSpecies2;
@@ -36,7 +37,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         }
 
-        public static ArchSpecies DragonKin => new ArchSpecies("standard", 5, "DragonScale Armor", "Breath of the Dragon",  3);
+        public static ArchSpecies DragonKin => new ArchSpecies("standard", "Paladine", 5, "DragonScale Armor", "Breath of the Dragon",  3);
         public static ArchSpecies DaemonKyne=> new ArchSpecies("lowLight", 5,  "Hellfire", "Polymorph", 2);
         public static ArchSpecies Dwarf => new ArchSpecies("Dark", 10, "Escavate",  "Brew",  4);
         public static ArchSpecies Elf => new ArchSpecies("Keen", -2,  "Fay Illuminte", "N/A", -1);
