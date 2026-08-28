@@ -27,16 +27,18 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
 
-    {
+    
         //m1
         public static void NameMyCharacter()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.BackgroundColor = ConsoleColor.Black;
-
+            bool validName = false;
             
+
+            while (!validName) 
             {
-                Console.WriteLine($"Would you like to name your character (choice 1) or use default (choice 2){ArchType.dName}?");
+                Console.WriteLine($"Would you like to name your character (choice 1) or use default (choice 2){HUD.jobType.DefaultName}?");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 if (choice == 1)
                 {
@@ -44,19 +46,24 @@ namespace SummerSelfDirectedProjectConsoleRPG
                      Console.ForegroundColor = ConsoleColor.Blue;
                     nameChoice = Console.ReadLine();
                     // Program nameUsed = Console.ReadLine();
-                   
+
                  
                     while (true)
                     {
                         if (nameChoice.Length <= Program.MaxNameLLength) break;
 
-                        Console.WriteLine($"Error: Input is too long! please limit to 15 characters({Program.nameUsed.Length}/{Program.MaxNameLLength})");
+                        Console.WriteLine($"Error: Input is too long! please limit to 15 characters({HUD.nameChoice.Length}/{Program.MaxNameLLength})");
                         NameMyCharacter();
                     }
+
+                    validName = true;
                 }
                 else if (choice == 2)
                 {
-                    nameChoice = PC.arcJob.ArchType.dName;
+                    nameChoice = HUD.jobType.DefaultName;
+
+                   validName = true;
+
                 }
                 else
                 {
@@ -117,6 +124,10 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         Console.WriteLine("You have chosen to be a Sorcerer, 'Phenomional Cosmic Power...About to be sued by Disney...'");
                         SelectJob = true;
                         break;
+
+                    default:
+                        Console.WriteLine("Invalid choice. Please pick a number from 1 to 6.");
+                        break;
                 }
             }
         }
@@ -168,6 +179,10 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         SpeciesChoice = SmallFolk;
                         Console.WriteLine("You have chosen to be a SmallFolk,\n 'Hey... mind were you step please...no?.......YOINK!'");
                         SelectSpecies = true; 
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid choice. Please pick a number from 1 to 6.");
                         break;
                 }
             }
