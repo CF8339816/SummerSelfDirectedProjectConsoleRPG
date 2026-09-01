@@ -8,6 +8,12 @@ using System.Threading.Tasks;
 using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
 using static SummerSelfDirectedProjectConsoleRPG.ArchType;
 using static SummerSelfDirectedProjectConsoleRPG.PC;
+using static SummerSelfDirectedProjectConsoleRPG.FireSpells;
+using static SummerSelfDirectedProjectConsoleRPG.IceSpells;
+using static SummerSelfDirectedProjectConsoleRPG.HolySpells;
+using static SummerSelfDirectedProjectConsoleRPG.HealingSpells;
+using static SummerSelfDirectedProjectConsoleRPG.NatureSpells;
+using static SummerSelfDirectedProjectConsoleRPG.IllusionSpells;
 using static SummerSelfDirectedProjectConsoleRPG.Program;
 
 

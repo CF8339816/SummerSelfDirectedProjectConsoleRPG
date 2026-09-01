@@ -1,4 +1,4 @@
-using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -18,18 +18,15 @@ using static SummerSelfDirectedProjectConsoleRPG.IllusionSpells;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
-
-    public class PC : Character
+    public class Enemy : Character
     {
 
-       public int PcHp = 100;
-       
-        public int plXP = 0;
-        public int plLevel = 0;
+        public int EnHp = 100;
+                   
+        public int EnLevel = 0;
 
-
-        public int ArmorClass { get; }
-        public int MaxHP { get; }
+        public int EnArmorClass { get; }
+        public int EnMaxHP { get; }
 
 
         public ArchType ArcJob = HUD.jobType;
@@ -37,20 +34,21 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
 
-        public PC(string type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, ArchType arcJob, ArchSpecies arcSpecies, int maxHP, int maxAC, int level, int XP)
-           : base("PC", name, strength, speed, dex, baseAC, baseHp, baseAtk, baseMana, symbol, color)
+        public Enemy(string _type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, ArchType arcJob, ArchSpecies arcSpecies, int maxEnHP, int maxEnAC, int levelEn)
+            : base("PC", name, strength, speed, dex, baseAC, baseHp, baseAtk, baseMana, symbol, color)
 
-      
+
 
         {
-          
+
             ArcJob = arcJob;
             ArcSpecies = arcSpecies;
-            ArmorClass = maxAC; 
-            MaxHP = maxHP;
-            plXP = XP;
-            plLevel = level;
+            EnArmorClass = maxEnAC;
+            EnMaxHP = maxEnHP;
+               
+            EnLevel = levelEn;
         }
 
     }
-}
+ }
+
