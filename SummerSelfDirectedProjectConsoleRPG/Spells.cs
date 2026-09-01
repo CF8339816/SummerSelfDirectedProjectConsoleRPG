@@ -19,10 +19,10 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public int ManaCost { get; set; }
 
 
-        //public ConsoleColor _color;
-        //public char _symbol { get; protected set; }
+        public ConsoleColor _targColor;
+        public char _targSymbol { get; protected set; }
 
-        public Spells(string type, string name, int level, int castingTime, int failurePercent, int DmgMultiplier, int diceType, int spellAtk, int manaCost /*, char symbol, ConsoleColor color*/)
+        public Spells(string type, string name, int level, int castingTime, int failurePercent, int DmgMultiplier, int diceType, int spellAtk, int manaCost, char targSymbol, ConsoleColor targColor)
         {
             _type = type;
             Name = name;
@@ -35,8 +35,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
             DiceType = diceType;
             SpellAttackBonus = spellAtk;
             ManaCost = manaCost;
+            
+            _targSymbol = targSymbol;
+            _targColor = targColor;
 
-   
+
 
         }
     }
