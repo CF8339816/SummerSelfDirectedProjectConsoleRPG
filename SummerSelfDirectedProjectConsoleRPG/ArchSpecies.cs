@@ -17,7 +17,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
     {
         public string Vision { get; }
-       
+        public string SpeciesTitle { get; }
         public int HpBonusSpecies { get; }
         public string BonusSpellsSpecies1 { get; }
         public string BonusSpellsSpecies2 { get; }
@@ -25,10 +25,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public int ManaBonusSpecies { get; }
 
 
-        private ArchSpecies(string vision,  int HpBspecies,int MPBonusSpecies, string bonusSpellsSpecies1, string bonusSpellsSpecies2, int acBonusSpecies)
+        private ArchSpecies(string vision,string speciesTitle, int HpBspecies,int MPBonusSpecies, string bonusSpellsSpecies1, string bonusSpellsSpecies2, int acBonusSpecies)
         {
 
             Vision = vision;
+            SpeciesTitle = speciesTitle;    
             HpBonusSpecies = HpBspecies;
             BonusSpellsSpecies1 = bonusSpellsSpecies1;
             BonusSpellsSpecies2 = bonusSpellsSpecies2;
@@ -37,16 +38,16 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         }
 
-        public static ArchSpecies DragonKin => new ArchSpecies("standard", 5, 0,"DragonScale Armor", "Breath of the Dragon", 3);
-        public static ArchSpecies DaemonKyne=> new ArchSpecies("lowLight", 5,3,  "Hellfire", "Polymorph", 2);
-        public static ArchSpecies Dwarf => new ArchSpecies("Dark", 10,0, "Escavate",  "Brew",  4);
-        public static ArchSpecies Elf => new ArchSpecies("Keen", -2, 2, "Fay Illuminte", "N/A", -1);
-        public static ArchSpecies Human => new ArchSpecies("Standard", 0,0, "N/A", "N/A", 0);
-        public static ArchSpecies SmallFolk => new ArchSpecies("Keen", -4,0, "N/A", "N/A",  -2);
-        public static ArchSpecies Orc => new ArchSpecies("Standard", 0,0, "N/A", "N/A", 0);
-        public static ArchSpecies Goblin => new ArchSpecies("Standard", 0,0, "N/A", "N/A", 0);
-        public static ArchSpecies HobGoblin => new ArchSpecies("Standard", 0,0, "N/A", "N/A", 0);
-        public static ArchSpecies Gnoll => new ArchSpecies("Standard", 0, 0, "N/A", "N/A", 0);
+        public static ArchSpecies DragonKin => new ArchSpecies("standard", "DragonKin", 5, 0,"DragonScale Armor", "Breath of the Dragon", 3);
+        public static ArchSpecies DaemonKyne=> new ArchSpecies("lowLight", "DaemonKyne", 5,3,  "Hellfire", "Polymorph", 2);
+        public static ArchSpecies Dwarf => new ArchSpecies("Dark", "Dwarf", 10,0, "Escavate",  "Brew",  4);
+        public static ArchSpecies Elf => new ArchSpecies("Keen", "Elf", -2, 2,  "Fay Illuminte", "N/A", -1);
+        public static ArchSpecies Human => new ArchSpecies("Standard", "Human", 0,0, "N/A", "N/A", 0);
+        public static ArchSpecies SmallFolk => new ArchSpecies("Keen", "SmallFolk", -4,0, "N/A", "N/A",  -2);
+        public static ArchSpecies Orc => new ArchSpecies("Standard", "Orc", 0,0, "N/A", "N/A", 0);
+        public static ArchSpecies Goblin => new ArchSpecies("Standard", "Goblin", 0,0, "N /A", "N/A", 0);
+        public static ArchSpecies HobGoblin => new ArchSpecies("Standard", "HobGoblin", 0,0, "N/A", "N/A", 0);
+        public static ArchSpecies Gnoll => new ArchSpecies("Standard", "Gnoll", 0, 0, "N/A", "N/A", 0);
 
 
     }

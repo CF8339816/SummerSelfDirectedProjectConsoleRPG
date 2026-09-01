@@ -18,8 +18,9 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public const int MaxNameLength = 15;
         public static string nameChoice { get; set; } 
         public static ArchType jobType { get; set; }
+        public static string _Job;
         public static ArchSpecies SpeciesChoice { get; set; }
-
+        public static string _Species;
         public static ArchType Defaultspecies { get; set; }
 
         //m1
@@ -83,36 +84,42 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 {
                     case 1:
                         jobType = ArchType.Paladin;
+                        _Job = "Paladin";
                         Console.WriteLine("You have chosen to be a Paladin, 'Stalward and true... With great power comes...SMITE!!!!!'");
                         SelectJob = true;
                         break;
 
                     case 2:
                         jobType = ArchType.Bard;
+                        _Job = "Bard";
                         Console.WriteLine("You have chosen to be a Bard, 'I'm not the problem.... The story this would make is the problem...'");
                         SelectJob = true;
                         break;
 
                     case 3:
                         jobType = ArchType.Cleric;
+                        _Job = "Cleric";
                         Console.WriteLine("You have chosen to be a Cleric, 'Oh Lawd give me the strngth to heal these nitwits....'");
                         SelectJob = true;
                         break;
 
                     case 4:
                         jobType = ArchType.Rogue;
+                        _Job = "Rogue";
                         Console.WriteLine("You have chosen to be a Rogue , 'Sneaky, sneaky  Suggah...'");
                         SelectJob = true;
                         break;
 
                     case 5:
                         jobType = ArchType.Ranger;
+                        _Job = "Ranger";
                         Console.WriteLine("You have chosen to be a Ranger, 'Be Verry Verry quiet... I'm hunting Were-woofs.'");
                         SelectJob = true;
                         break;
 
                     case 6:
                         jobType = ArchType.Sorcerer;
+                        _Job = "Sorcerer";
                         Console.WriteLine("You have chosen to be a Sorcerer, 'Phenomional Cosmic Power...About to be sued by Disney...'");
                         SelectJob = true;
                         break;
@@ -147,36 +154,42 @@ namespace SummerSelfDirectedProjectConsoleRPG
                     {
                         case 1:
                             SpeciesChoice = ArchSpecies.DragonKin;
+                            _Species = "DragonKin";
                             Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
                             SelectSpecies = true;
                             break;
 
                         case 2:
                             SpeciesChoice = ArchSpecies.DaemonKyne;
+                            _Species = "DaemonKyne";
                             Console.WriteLine("You have chosen to be a DaemonKyne,\n 'My parents? .....Well... It's complicated.'");
                             SelectSpecies = true;
                             break;
 
                         case 3:
                             SpeciesChoice = ArchSpecies.Dwarf;
+                            _Species = "Dwarf";
                             Console.WriteLine("You have chosen to be a Dwarf,\n 'If ye Likem Hairy...I got whatcha want!'");
                             SelectSpecies = true;
                             break;
 
                         case 4:
                             SpeciesChoice = ArchSpecies.Elf;
+                            _Species = "Elf";
                             Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not wan to know...'");
                             SelectSpecies = true;
                             break;
 
                         case 5:
                             SpeciesChoice = ArchSpecies.Human;
+                            _Species = "Human";
                             Console.WriteLine("You have chosen to be a Human,\n 'I don't know why other Species get nervouse when I'm around...'");
                             SelectSpecies = true;
                             break;
 
                         case 6:
                             SpeciesChoice = ArchSpecies.SmallFolk;
+                            _Species = "SmallFolk";
                             Console.WriteLine("You have chosen to be a SmallFolk,\n 'Hey... mind were you step please...no?.......YOINK!'");
                             SelectSpecies = true;
                             break;

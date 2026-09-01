@@ -49,7 +49,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
             Console.Clear();
             Console.WriteLine($"--- Character Creation Complete ---");
             Console.WriteLine($"Name: {Player.Name} ({Player.ArcSpecies.Vision} Vision)");
-            Console.WriteLine($"Class: {HUD.jobType} Archetype, Player Species: {HUD.SpeciesChoice}");
+            // Console.WriteLine($"Class: {HUD.jobType.JobTitle} Archetype, Player Species: {HUD.SpeciesChoice.SpeciesTitle}");
+            Console.WriteLine($"Class: {Player.ArcJob.JobTitle} Archetype, Player Species: {Player.ArcSpecies.SpeciesTitle}");
             Console.WriteLine($"HP: {Program.PlayerHp} | AC: {Program.PlayerAC}");
             Console.WriteLine($"Granted Spells: {Player.ArcSpecies.BonusSpellsSpecies1}, {Player.ArcSpecies.BonusSpellsSpecies2}");
             Console.WriteLine($"Magic type 1: {Player.ArcJob.MagicType1}, Magic type 2 {Player.ArcJob.MagicType2}");
