@@ -47,16 +47,34 @@ namespace SummerSelfDirectedProjectConsoleRPG
             PlayerMP = HUD.jobType.ManaBonus + HUD.SpeciesChoice.ManaBonusSpecies + Player.BaseMana;
 
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"--- Character Creation Complete ---");
-            Console.WriteLine($"Name: {Player.Name} ({Player.ArcSpecies.Vision} Vision)");
-            // Console.WriteLine($"Class: {HUD.jobType.JobTitle} Archetype, Player Species: {HUD.SpeciesChoice.SpeciesTitle}");
-            Console.WriteLine($"Class: {Player.ArcJob.JobTitle} Archetype, Player Species: {Player.ArcSpecies.SpeciesTitle}");
-            Console.WriteLine($"HP: {Program.PlayerHp} | AC: {Program.PlayerAC}");
-            Console.WriteLine($"Granted Spells: {Player.ArcSpecies.BonusSpellsSpecies1}, {Player.ArcSpecies.BonusSpellsSpecies2}");
-            Console.WriteLine($"Magic type 1: {Player.ArcJob.MagicType1}, Magic type 2 {Player.ArcJob.MagicType2}");
-            Console.WriteLine($"Max Level Magic type 1: {Player.ArcJob.MaxSpellLevel1}, Max Level Magic type 2 {Player.ArcJob.MaxSpellLevel2}");
-            Console.WriteLine($"Player Icon: {Player._symbol}, Icon Color {Player._color}");
-            Console.WriteLine($"Player Attack: {Program.PlayerATK}, Player Mana {Program.PlayerMP}");
+           
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Name: \u001b[36m{Player.Name}\u001b[33m,(\u001b[36m{Player.ArcSpecies.Vision} Vision\u001b[33m)");
+           
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Class: \u001b[36m{Player.ArcJob.JobTitle} \u001b[33mArchetype  | Player Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m");
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"HP: \u001b[36m{Program.PlayerHp} \u001b[33m| AC: \u001b[36m{Program.PlayerAC}\u001b[33m");
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Granted Spells: \u001b[36m{Player.ArcSpecies.BonusSpellsSpecies1} \u001b[33m | \u001b[36m{Player.ArcSpecies.BonusSpellsSpecies2}\u001b[33m");
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Magic type 1:\u001b[36m {Player.ArcJob.MagicType1} \u001b[33m | Magic type 2: \u001b[36m{Player.ArcJob.MagicType2}\u001b[33m");
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Max Level Magic type 1: \u001b[36m{Player.ArcJob.MaxSpellLevel1} \u001b[33m | Max Level Magic type 2: \u001b[36m{Player.ArcJob.MaxSpellLevel2}\u001b[33m");
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Player Icon: \u001b[36m{Player._symbol} \u001b[33m | Icon Color: \u001b[36m{Player._color}\u001b[33m");
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Player Attack: \u001b[36m{Program.PlayerATK} \u001b[33m | Player Mana: \u001b[36m{Program.PlayerMP}\u001b[33m");
+
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("-----------------------------------\n");
 
 
