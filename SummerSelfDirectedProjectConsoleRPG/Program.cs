@@ -22,6 +22,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         public static int PlayerHp;
         public static int PlayerAC;
+        public static int PlayerATK;
+        public static int PlayerMP;
         public static int MagicACBonus;
         public static int MaxNameLLength = 15;
         public ArchType _ArchType = HUD.jobType;
@@ -41,25 +43,19 @@ namespace SummerSelfDirectedProjectConsoleRPG
              
             PlayerHp = Player.BaseHp + Player.PcHp + HUD.jobType.AtHp + HUD.SpeciesChoice.HpBonusSpecies;
             PlayerAC = HUD.SpeciesChoice.ACbonusSpecies + HUD.jobType.ArmorBonus + MagicACBonus;
-           
-            
-            // public PC(string _type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, ArchType arcJob, ArchSpecies arcSpecies, int maxHP, int maxAC, int level, int XP)
-            // PC Player = new PC("PC", HUD.nameChoice, 11, 11, 10, 7, 2, 12, '&', ConsoleColor.Blue,/* arcJob, arcSpecies,*/ Program.PlayerHp, Program.PlayerAC, 1, 0);
-
-
-
-        //PlayerHp = Character.baseHp + PC.PcHp + ArchType Program._ArchType.atHp + ArchSpecies Program._ArchSpecies.HpBspecies;
-        //PlayerAC =PC.arcSpecies.ACbonusSpecies + PC.arcType.ArmorBonus + MagicACBonus;
-        //PlayerAC = ArchSpecies.arcSpecies.ACbonusSpecies + ArchType.ArmorBonus + MagicACBonus;
-
-
+            PlayerATK = HUD.jobType.AttackBonus + Player.BaseAttack;
+            PlayerMP = HUD.jobType.ManaBonus + HUD.SpeciesChoice.ManaBonusSpecies + Player.BaseMana;
 
             Console.Clear();
             Console.WriteLine($"--- Character Creation Complete ---");
             Console.WriteLine($"Name: {Player.Name} ({Player.ArcSpecies.Vision} Vision)");
-            Console.WriteLine($"Class: {Player.ArcJob.jobTitle} Archetype");
-            Console.WriteLine($"HP: {Player.MaxHP} | AC: {Player.ArmorClass}");
-            Console.WriteLine($"Spells Known: {Player.ArcSpecies.BonusSpellsSpecies1}, {Player.ArcSpecies.BonusSpellsSpecies2}");
+            Console.WriteLine($"Class: {HUD.jobType} Archetype, Player Species: {HUD.SpeciesChoice}");
+            Console.WriteLine($"HP: {Program.PlayerHp} | AC: {Program.PlayerAC}");
+            Console.WriteLine($"Granted Spells: {Player.ArcSpecies.BonusSpellsSpecies1}, {Player.ArcSpecies.BonusSpellsSpecies2}");
+            Console.WriteLine($"Magic type 1: {Player.ArcJob.MagicType1}, Magic type 2 {Player.ArcJob.MagicType2}");
+            Console.WriteLine($"Max Level Magic type 1: {Player.ArcJob.MaxSpellLevel1}, Max Level Magic type 2 {Player.ArcJob.MaxSpellLevel2}");
+            Console.WriteLine($"Player Icon: {Player._symbol}, Icon Color {Player._color}");
+            Console.WriteLine($"Player Attack: {Program.PlayerATK}, Player Mana {Program.PlayerMP}");
             Console.WriteLine("-----------------------------------\n");
 
 
@@ -79,10 +75,6 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
 
-//public ArchType ArchType(" ", 5, 50, " ", 3, 0, "Holy", "N/A", 13, "Plate", 5)
-
-
-
 //public static Player player = new Player(" ", 3, 3, plaAtkUP, '!', plaMaxHP, ConsoleColor.Blue, (1, 55), (1, 24));
 //public static List<EnemyLeader> enemiesMap1 = new List<EnemyLeader>();
 //public static List<EnemyLeader> enemiesMap2 = new List<EnemyLeader>();
@@ -97,18 +89,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 //public static bool isAlly = false; //sets bool to check for other allies in movement path
 
-// ArchType(" ", 5, 50, " ", 3, 0, "Holy", "N/A", 13, "Plate", 5)
-
-
-
-
-
-
 
 //        HUD.Instructions();
-//        player._name =Name;
-//        player._attack =plaAtkUP;
-//       PC.profession = arcJob;
 
 
 

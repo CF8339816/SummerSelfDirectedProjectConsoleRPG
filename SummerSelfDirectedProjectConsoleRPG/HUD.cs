@@ -13,41 +13,33 @@ using static SummerSelfDirectedProjectConsoleRPG.Program;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
-    //static public string CharRole { get;  }
-
-
-      public class HUD
+    public class HUD
     {
         public const int MaxNameLength = 15;
-        public static string nameChoice { get; set; } = "";
+        public static string nameChoice { get; set; } 
         public static ArchType jobType { get; set; }
         public static ArchSpecies SpeciesChoice { get; set; }
 
+        public static ArchType Defaultspecies { get; set; }
 
-
-
-
-    
         //m1
         public static void NameMyCharacter()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.BackgroundColor = ConsoleColor.Black;
             bool validName = false;
-            
 
-            while (!validName) 
+            while (!validName)
             {
                 Console.WriteLine($"Would you like to name your character (choice 1) or use default (choice 2){HUD.jobType.DefaultName}?");
                 int choice = Convert.ToInt32(Console.ReadLine());
+              
                 if (choice == 1)
                 {
                     Console.WriteLine("What is your character's name");
-                     Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     nameChoice = Console.ReadLine();
-                    // Program nameUsed = Console.ReadLine();
-
-                 
+                  
                     while (true)
                     {
                         if (nameChoice.Length <= Program.MaxNameLLength) break;
@@ -62,7 +54,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 {
                     nameChoice = HUD.jobType.DefaultName;
 
-                   validName = true;
+                    validName = true;
 
                 }
                 else
@@ -90,37 +82,37 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 switch (jobSelect)
                 {
                     case 1:
-                        jobType = Paladin;
+                        jobType = ArchType.Paladin;
                         Console.WriteLine("You have chosen to be a Paladin, 'Stalward and true... With great power comes...SMITE!!!!!'");
                         SelectJob = true;
                         break;
 
                     case 2:
-                        jobType = Bard;
+                        jobType = ArchType.Bard;
                         Console.WriteLine("You have chosen to be a Bard, 'I'm not the problem.... The story this would make is the problem...'");
                         SelectJob = true;
                         break;
 
                     case 3:
-                        jobType = Cleric;
+                        jobType = ArchType.Cleric;
                         Console.WriteLine("You have chosen to be a Cleric, 'Oh Lawd give me the strngth to heal these nitwits....'");
                         SelectJob = true;
                         break;
 
                     case 4:
-                        jobType = Rogue;
+                        jobType = ArchType.Rogue;
                         Console.WriteLine("You have chosen to be a Rogue , 'Sneaky, sneaky  Suggah...'");
                         SelectJob = true;
                         break;
 
                     case 5:
-                        jobType = Ranger;
+                        jobType = ArchType.Ranger;
                         Console.WriteLine("You have chosen to be a Ranger, 'Be Verry Verry quiet... I'm hunting Were-woofs.'");
                         SelectJob = true;
                         break;
 
                     case 6:
-                        jobType = Sorcerer;
+                        jobType = ArchType.Sorcerer;
                         Console.WriteLine("You have chosen to be a Sorcerer, 'Phenomional Cosmic Power...About to be sued by Disney...'");
                         SelectJob = true;
                         break;
@@ -130,6 +122,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         break;
                 }
             }
+
+       
         }
 
 
@@ -138,54 +132,76 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static void ChooseMySpecies()
         {
             bool SelectSpecies = false;
+
             while (!SelectSpecies)
             {
-                Console.WriteLine("Please choose a character Species from the following list:\n 1) DragonKin 2) DaemonKyne, 3) Dwarf, 4) Elf, 5) Human, 6) SmallFolk.\n please type a number between 1-6");
-                int speciesSelect = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"Would you like to choose your character Species (choice 1) or use default (choice 2){HUD.jobType.DefaultSpecies}?");
+                int choice = Convert.ToInt32(Console.ReadLine());
 
-                switch (speciesSelect)
+                if (choice == 1)
                 {
-                    case 1:
-                        SpeciesChoice = DragonKin;
-                        Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
-                        SelectSpecies = true;
-                        break;
+                    Console.WriteLine("Please choose a character Species from the following list:\n 1) DragonKin 2) DaemonKyne, 3) Dwarf, 4) Elf, 5) Human, 6) SmallFolk.\n please type a number between 1-6");
+                    int speciesSelect = Convert.ToInt32(Console.ReadLine());
 
-                    case 2:
-                        SpeciesChoice = DaemonKyne;
-                        Console.WriteLine("You have chosen to be a DaemonKyne,\n 'My parents? .....Well... It's complicated.'");
-                        SelectSpecies = true;
-                        break;
+                    switch (speciesSelect)
+                    {
+                        case 1:
+                            SpeciesChoice = ArchSpecies.DragonKin;
+                            Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
+                            SelectSpecies = true;
+                            break;
 
-                    case 3:
-                        SpeciesChoice = Dwarf;
-                        Console.WriteLine("You have chosen to be a Dwarf,\n 'If ye Likem Hairy...I got whatcha want!'");
-                        SelectSpecies = true;
-                        break;
+                        case 2:
+                            SpeciesChoice = ArchSpecies.DaemonKyne;
+                            Console.WriteLine("You have chosen to be a DaemonKyne,\n 'My parents? .....Well... It's complicated.'");
+                            SelectSpecies = true;
+                            break;
 
-                    case 4:
-                        SpeciesChoice = Elf;
-                        Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not wan to know...'");
-                        SelectSpecies = true; 
-                        break;
+                        case 3:
+                            SpeciesChoice = ArchSpecies.Dwarf;
+                            Console.WriteLine("You have chosen to be a Dwarf,\n 'If ye Likem Hairy...I got whatcha want!'");
+                            SelectSpecies = true;
+                            break;
 
-                    case 5:
-                        SpeciesChoice = Human;
-                        Console.WriteLine("You have chosen to be a Human,\n 'I don't know why other Species get nervouse when I'm around...'");
-                        SelectSpecies = true; 
-                        break;
+                        case 4:
+                            SpeciesChoice = ArchSpecies.Elf;
+                            Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not wan to know...'");
+                            SelectSpecies = true;
+                            break;
 
-                    case 6:
-                        SpeciesChoice = SmallFolk;
-                        Console.WriteLine("You have chosen to be a SmallFolk,\n 'Hey... mind were you step please...no?.......YOINK!'");
-                        SelectSpecies = true; 
-                        break;
+                        case 5:
+                            SpeciesChoice = ArchSpecies.Human;
+                            Console.WriteLine("You have chosen to be a Human,\n 'I don't know why other Species get nervouse when I'm around...'");
+                            SelectSpecies = true;
+                            break;
 
-                    default:
-                        Console.WriteLine("Invalid choice. Please pick a number from 1 to 6.");
-                        break;
+                        case 6:
+                            SpeciesChoice = ArchSpecies.SmallFolk;
+                            Console.WriteLine("You have chosen to be a SmallFolk,\n 'Hey... mind were you step please...no?.......YOINK!'");
+                            SelectSpecies = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid choice. Please pick a number from 1 to 6.");
+                            break;
+                    }
+                }
+
+                else if (choice == 2)
+                {
+                    SpeciesChoice = HUD.jobType.DefaultSpecies;
+
+                    SelectSpecies = true;
+
+                }
+                else
+                {
+                    Console.WriteLine("That is not a valid choice please choose again");
+                    ChooseMySpecies();
                 }
             }
         }
     }
 }
+
+
