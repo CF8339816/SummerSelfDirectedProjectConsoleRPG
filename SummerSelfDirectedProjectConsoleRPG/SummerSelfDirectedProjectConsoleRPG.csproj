@@ -56,6 +56,7 @@
     <Compile Include="ArcaneSpells.cs" />
     <Compile Include="IllusionSpells.cs" />
     <Compile Include="MapLoader.cs" />
+    <Compile Include="MapManager.cs" />
     <Compile Include="NatureSpells.cs" />
     <Compile Include="PC.cs" />
     <Compile Include="Program.cs" />

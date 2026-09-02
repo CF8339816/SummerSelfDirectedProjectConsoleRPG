@@ -28,21 +28,20 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public int EnArmorClass { get; }
         public int EnMaxHP { get; }
 
-
-        public ArchType ArcJob = HUD.jobType;
-        public ArchSpecies ArcSpecies = HUD.SpeciesChoice;
-
+        public ArchType EnArcJob;
+        public ArchSpecies EnArcSpecies;
 
 
-        public Enemy(string _type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, ArchType arcJob, ArchSpecies arcSpecies, int maxEnHP, int maxEnAC, int levelEn)
+
+        public Enemy(string _type, string name, int strength, int speed, int dex, int baseAC, int baseHp, int baseAtk, int baseMana, char symbol, ConsoleColor color, ArchType enArcJob, ArchSpecies enArcSpecies, int maxEnHP, int maxEnAC, int levelEn)
             : base("PC", name, strength, speed, dex, baseAC, baseHp, baseAtk, baseMana, symbol, color)
 
 
 
         {
 
-            ArcJob = arcJob;
-            ArcSpecies = arcSpecies;
+            EnArcJob = enArcJob;
+            EnArcSpecies = enArcSpecies;
             EnArmorClass = maxEnAC;
             EnMaxHP = maxEnHP;
                
