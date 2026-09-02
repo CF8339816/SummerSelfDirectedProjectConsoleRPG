@@ -23,6 +23,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static string _Species;
         public static ArchType Defaultspecies { get; set; }
 
+        public static PC Player { get; set; }   
         //m1
         public static void NameMyCharacter()
         {
@@ -163,6 +164,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("Please choose a character Species from the following list:\n 1) DragonKin 2) DaemonKyne, 3) Dwarf, 4) Elf, 5) Human, 6) SmallFolk.\n please type a number between 1-6");
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     int speciesSelect = Convert.ToInt32(Console.ReadLine());
 
                     switch (speciesSelect)
@@ -195,7 +197,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                             SpeciesChoice = ArchSpecies.Elf;
                             _Species = "Elf";
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not wan to know...'");
+                            Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not want to know...'");
                             SelectSpecies = true;
                             break;
 
@@ -237,6 +239,64 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 }
             }
         }
+
+
+        //m4
+
+        public static void StatBlock()
+        {
+
+        }
+
+        //m5
+
+        public static void Instructions()
+        {
+            Console.SetCursorPosition(0, 26);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("Press any Key to start... Use W,A,S,D  or arrow keys to move around the map...Press 'Q' to exit...\n" +
+                "Fight enemies by manouvering to them or try to avoid them...\n" +
+                " Lava '%' will damage you, Water 'w' will heal you, '@' and '*' will port you forward and back through the maps");
+            Console.ResetColor();
+        }
+
+        //m6
+
+        public static void Farewell()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Clear();
+
+            Console.SetCursorPosition(60, 25);
+            Console.WriteLine("We hope you come back soon... Please press any key to exit");
+            Console.ReadKey(true);
+            Console.WriteLine("\n\n\n\n\n\n");
+            Console.ResetColor();
+
+        }
+
+        //m7
+
+       public static void PcCreatinConfirmation(PC Player)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"--- Character Creation Complete ---");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Name: \u001b[36m{Player.Name}\u001b[33m  | (\u001b[36m{Player.ArcSpecies.Vision} Vision\u001b[33m)");
+            Console.WriteLine($"Class: \u001b[36m{Player.ArcJob.JobTitle} \u001b[33mArchetype  | Player Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m");
+            Console.WriteLine($"HP: \u001b[36m{Program.PlayerHp} \u001b[33m  | AC: \u001b[36m{Program.PlayerAC}\u001b[33m");
+            Console.WriteLine($"Granted Spells: \u001b[36m{Player.ArcSpecies.BonusSpellsSpecies1} \u001b[33m | \u001b[36m{Player.ArcSpecies.BonusSpellsSpecies2}\u001b[33m");
+            Console.WriteLine($"Magic type 1:\u001b[36m {Player.ArcJob.MagicType1} \u001b[33m | Magic type 2: \u001b[36m{Player.ArcJob.MagicType2}\u001b[33m");
+            Console.WriteLine($"Max Level Magic type 1: \u001b[36m{Player.ArcJob.MaxSpellLevel1} \u001b[33m | Max Level Magic type 2: \u001b[36m{Player.ArcJob.MaxSpellLevel2}\u001b[33m");
+            Console.WriteLine($"Player Icon: \u001b[36m{Player._symbol} \u001b[33m | Icon Color: \u001b[36m{Player._color}\u001b[33m");
+            Console.WriteLine($"Player Attack: \u001b[36m{Program.PlayerATK} \u001b[33m | Player Mana: \u001b[36m{Program.PlayerMP}\u001b[33m");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("-----------------------------------\n");
+        }
+
+
+
+
     }
 }
 

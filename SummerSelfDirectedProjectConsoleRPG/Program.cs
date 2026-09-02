@@ -33,7 +33,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public ArchSpecies _ArchSpecies = HUD.SpeciesChoice;
 
 
-        public static bool isPlaying = true;
+       // public static bool isPlaying = true;
 
 
         static void Main()
@@ -50,44 +50,39 @@ namespace SummerSelfDirectedProjectConsoleRPG
             PlayerMP = HUD.jobType.ManaBonus + HUD.SpeciesChoice.ManaBonusSpecies + Player.BaseMana;
 
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"--- Character Creation Complete ---");
-           
-          Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"Name: \u001b[36m{Player.Name}\u001b[33m,(\u001b[36m{Player.ArcSpecies.Vision} Vision\u001b[33m)");
-           
-           // Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"Class: \u001b[36m{Player.ArcJob.JobTitle} \u001b[33mArchetype  | Player Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m");
 
-           // Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"HP: \u001b[36m{Program.PlayerHp} \u001b[33m| AC: \u001b[36m{Program.PlayerAC}\u001b[33m");
+            HUD.PcCreatinConfirmation(Player);
 
-           // Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"Granted Spells: \u001b[36m{Player.ArcSpecies.BonusSpellsSpecies1} \u001b[33m | \u001b[36m{Player.ArcSpecies.BonusSpellsSpecies2}\u001b[33m");
+            Console.ReadKey(true);
+            Console.Clear();
+            HUD.Instructions();
+            Console.ReadKey(true);
+            GameManager.Gameon();
 
-            //Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"Magic type 1:\u001b[36m {Player.ArcJob.MagicType1} \u001b[33m | Magic type 2: \u001b[36m{Player.ArcJob.MagicType2}\u001b[33m");
-
-           // Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"Max Level Magic type 1: \u001b[36m{Player.ArcJob.MaxSpellLevel1} \u001b[33m | Max Level Magic type 2: \u001b[36m{Player.ArcJob.MaxSpellLevel2}\u001b[33m");
-
-           // Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"Player Icon: \u001b[36m{Player._symbol} \u001b[33m | Icon Color: \u001b[36m{Player._color}\u001b[33m");
-
-           // Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"Player Attack: \u001b[36m{Program.PlayerATK} \u001b[33m | Player Mana: \u001b[36m{Program.PlayerMP}\u001b[33m");
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("-----------------------------------\n");
+            //while (isPlaying)
+            //{
 
 
 
+            //    int plX = 0, plY = 0;
+            //    ConsoleKey input = Console.ReadKey(true).Key;
+            //    // move player with W,A,S,D or optional arrow keys 
+            //    if (input == ConsoleKey.LeftArrow) plX = -1;
+            //    if (input == ConsoleKey.A) plX = -1;
+            //    if (input == ConsoleKey.RightArrow) plX = 1;
+            //    if (input == ConsoleKey.D) plX = 1;
+            //    if (input == ConsoleKey.UpArrow) plY = -1;
+            //    if (input == ConsoleKey.W) plY = -1;
+            //    if (input == ConsoleKey.DownArrow) plY = 1;
+            //    if (input == ConsoleKey.S) plY = 1;
 
-            while (isPlaying)
-            {
+            //    if (input == ConsoleKey.Q)
+            //    {
+            //        isPlaying = false; //Quit the 'is playing' loop
+            //        HUD.Farewell();
 
-
-            }
+            //    }
+            //}
 
         }
 
