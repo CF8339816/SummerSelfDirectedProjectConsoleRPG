@@ -47,8 +47,13 @@
     <Compile Include="ArchType.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Enemy.cs" />
-    <Compile Include="FireSpells.cs" />
+    <Compile Include="ElementalSpells.cs" />
+    <Compile Include="HealingSpells.cs" />
+    <Compile Include="HolySpells.cs" />
     <Compile Include="HUD.cs" />
+    <Compile Include="ArcaneSpells.cs" />
+    <Compile Include="IllusionSpells.cs" />
+    <Compile Include="NatureSpells.cs" />
     <Compile Include="PC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -58,7 +58,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         }
 
         public static ArchType Paladin => new ArchType("Medrin", "Paladin", 5, 50, 5,3, DragonKin, 3, 0, "Holy", "N/A", 13, "Plate", 5);
-        public static ArchType Bard => new ArchType("Tessa", "Bard", 2, 35, 2,2, DaemonKyne, 3, 6, "Holy", "Illusion", 11, "Leather", 2);
+        public static ArchType Bard => new ArchType("Tessa", "Bard", 2, 35, 2,2, DaemonKyne, 3, 6, "Healing", "Illusion", 11, "Leather", 2);
         public static ArchType Cleric => new ArchType("Fray", "Cleric", 4, 40, 5, 5, Dwarf, 6, 6, "Holy", "Healing", 13, "ChainMail & Shield", 4);
         public static ArchType Sorcerer => new ArchType("Garth", "Sorcerer", 1, 10, 1, 8, Human, 6, 6, "Arcane ", "Elemental", 12, "Cloth", 1);
         public static ArchType Ranger => new ArchType("Nae'O'mii", "Ranger", 3, 30, 4, 2, Elf, 3, 5, "Nature", "N/A", 10, "Leather & Buckler", 3);
