@@ -6,7 +6,49 @@ using System.Threading.Tasks;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
-    internal class Armor
+    public class Armor: Inventory
     {
+
+        public string CombatRange { get; }
+        public string ArmorType { get; }
+        public int WeaponDamageMultiplier { get; set; }
+        public int WeaponDiceType { get; set; }
+
+        public Armor(string itemType, string itemName, int itmBonBaseAC, int itmBonBaseHp, int itmBonBaseAtk, int itmBonBaseMana, int weaponDamageMultiplier, int weaponDiceType, string combatRange, string weaponType)
+            : base(itemType, itemName, itmBonBaseAC, itmBonBaseHp, itmBonBaseAtk, itmBonBaseMana)
+
+        {
+            CombatRange = combatRange;
+            ArmorType = weaponType;
+            WeaponDamageMultiplier = weaponDamageMultiplier;
+            WeaponDiceType = weaponDiceType;
+
+        }
+
+
+
+
+
+        //Cloth
+
+
+
+        //Leather
+
+
+
+        //Chain
+
+
+
+        //Plate
+
+
+
+        //Shield
+
+
+
     }
+
 }
