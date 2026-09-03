@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ArchSpecies.cs" />
     <Compile Include="ArchType.cs" />
+    <Compile Include="Armor.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="CombatManager.cs" />
     <Compile Include="Enemy.cs" />
@@ -55,6 +56,8 @@
     <Compile Include="HUD.cs" />
     <Compile Include="ArcaneSpells.cs" />
     <Compile Include="IllusionSpells.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="KeyItem.cs" />
     <Compile Include="MapLoader.cs" />
     <Compile Include="MapManager.cs" />
     <Compile Include="NatureSpells.cs" />
@@ -62,6 +65,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spells.cs" />
+    <Compile Include="UseItem.cs" />
+    <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
