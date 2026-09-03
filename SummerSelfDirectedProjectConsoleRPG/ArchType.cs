@@ -80,8 +80,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static ArchType Peasant => new ArchType("", "Peasant", 4, 40, 5, 5, Goblin, 6, 6, "N/A", "N/A", 13, "Simple Clothes", 4);
         public static ArchType Merchant => new ArchType("", "Merchant", 1, 10, 1, 8, HobGoblin, 6, 6, "N/A ", "N/A", 12, "Good Clothes", 1);
         public static ArchType Noble => new ArchType("", "Nobel", 3, 30, 4, 2, Goblin, 3, 5, "N/A", "N/A", 10, "Fine Clothes", 3);
-        public static ArchType Guard => new ArchType("", "Guard", 2, 20, 3, 1, Gnoll, 4, 0, "Nature", "Elemental", 12, "Leather & Shield", 2);
-        public static ArchType Sheriff => new ArchType("", "Sheriff", 3, 30, 4, 2, Gnoll, 3, 5, "Arcane", "N/A", 10, "ScaleMail & Buckler", 3);
+        public static ArchType Guard => new ArchType("", "Guard", 2, 20, 3, 1, Gnoll, 4, 0, "N/A", "N/A", 12, "Leather & Shield", 2);
+        public static ArchType Sheriff => new ArchType("", "Sheriff", 3, 30, 4, 2, Gnoll, 3, 5, "Illusion", "N/A", 10, "ScaleMail & Buckler", 3);
         public static ArchType Knight => new ArchType("", "Knight", 2, 20, 3, 1, Orc, 4, 0, "Arcane", "Healing", 12, "Platmail and Shield", 2);
 
     }
