@@ -23,6 +23,14 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static string _Species;
         public static ArchType Defaultspecies { get; set; }
 
+        public static Armor armor1Type { get; set; }
+        public static string _armor1;
+        public static Armor armor2Type { get; set; }
+        public static string _armor2;
+        public static Weapon weapon1Type { get; set; }
+        public static string _weapon1;
+
+
         public static PC Player { get; set; }   
         //m1
         public static void NameMyCharacter()
@@ -296,8 +304,81 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
 
+        //m8
 
+
+        public static void SetArmor1()
+        {
+            bool Armor1 = false;
+            //0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default 
+
+            while (!Armor1)
+            {
+                
+                switch (SetAr1)
+                {
+
+                    case 0:
+                        armor1Type = Armor.UnArmored;
+                        _armor1 = "Unarmored";
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
+                        Armor1 = true;
+                        break;
+                   
+                    case 1:
+                        armor1Type = Armor.wornCloth;
+                        _armor1 = "Cloth";
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
+                        Armor1 = true;
+                            break;
+
+                    case 2:
+                    armor1Type = Armor.wornLeather;
+                    _armor1 = "Leather";
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine("You have chosen to be a DaemonKyne,\n 'My parents? .....Well... It's complicated.'");
+                    Armor1 = true;
+                        break;
+
+                    case 3:
+                    armor1Type = Armor.wornChain;
+                    _armor1 = "Chain";
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine("You have chosen to be a Dwarf,\n 'If ye Likem Hairy...I got whatcha want!'");
+                    Armor1 = true;
+                        break;
+
+                    case 4:
+                    armor1Type = Armor.wornPlate;
+                    _armor1 = "Plate";
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not want to know...'");
+                    Armor1 = true;
+                        break;
+
+                     
+
+                    default:
+                        if (ArchType ArcJob)
+                        {
+                            armor1Type = Armor.wornPlate;
+                        }
+
+                        break;
+                }
+            }
+        }
     }
+
+
+
+
+
+
+
+
 }
 
 
