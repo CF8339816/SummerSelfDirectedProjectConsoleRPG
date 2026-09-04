@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
 using static SummerSelfDirectedProjectConsoleRPG.ArchType;
 using static SummerSelfDirectedProjectConsoleRPG.PC;
@@ -25,7 +26,6 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public int BaseAttack { get; set; }
         public int BaseMana { get; set; }
        
-
         public ConsoleColor _color;
         public char _symbol { get; protected set; }
 

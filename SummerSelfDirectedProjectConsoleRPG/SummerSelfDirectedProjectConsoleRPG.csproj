@@ -57,6 +57,7 @@
     <Compile Include="ArcaneSpells.cs" />
     <Compile Include="IllusionSpells.cs" />
     <Compile Include="Inventory.cs" />
+    <Compile Include="InventoryManager.cs" />
     <Compile Include="KeyItem.cs" />
     <Compile Include="MapLoader.cs" />
     <Compile Include="MapManager.cs" />
