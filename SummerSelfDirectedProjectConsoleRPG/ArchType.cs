@@ -10,6 +10,10 @@ using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
 using static SummerSelfDirectedProjectConsoleRPG.ArchType;
 using static SummerSelfDirectedProjectConsoleRPG.PC;
 using static SummerSelfDirectedProjectConsoleRPG.Program;
+using static SummerSelfDirectedProjectConsoleRPG.Weapon;
+using static SummerSelfDirectedProjectConsoleRPG.Armor;
+using static SummerSelfDirectedProjectConsoleRPG.EquipmentManager;
+
 
 
 namespace SummerSelfDirectedProjectConsoleRPG
@@ -27,18 +31,18 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public string Species { get; }
         public int MaxSpellLevel1 { get; }
         public int MaxSpellLevel2 { get; }
-        public string MagicType1 { get; }
-        public string MagicType2 { get; }
+        public int MagicType1 { get; } //0= no magic, 1= Elemental, 2= Arcane, 3= Nature, 4= Holy, 5= Healing, 6= Illusion
+        public int MagicType2 { get; }//0= no magic, 1= Elemental, 2= Arcane, 3= Nature, 4= Holy, 5= Healing, 6= Illusion
         public int XPtoLevelMultiplier { get; }
-        public string ArmorType1 { get; set; }
-        public string ArmorType2 { get; set; }
-        public string WeaponType1 { get; set; }
+        public int ArmorType1 { get; set; } //0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default 
+        public int ArmorType2 { get; set; } // 0 = no shield, 1 = shield, all other = default
+        public int WeaponType1 { get; set; }  // 0 = unarmed, 1= melee, 2 = ranged all else = default
         public int ArmorBonus { get; }
         public int AttackBonus { get; }
         public int ManaBonus { get; }
 
         private ArchType(string dName, string jobTitle, int HpBPL, int atHp, int JobAtkBonus,int JobManaBonus, ArchSpecies defSpecies, 
-            int maxSL1, int maxSL2, string magType1, string magType2, int xp2LMulti, string armorType1, string armorType2, string weaponType1, int ArBonus)
+            int maxSL1, int maxSL2, int magType1, int magType2, int xp2LMulti, int armorType1, int armorType2, int weaponType1, int ArBonus)
         {
 
             DefaultName = dName;          
@@ -64,34 +68,43 @@ namespace SummerSelfDirectedProjectConsoleRPG
             ManaBonus = JobManaBonus;
 
         }
+
+        public Weapon ReadiedWeapon1 = EquipmentManager.EquippedWeapon1;
+        public Armor ReadiedArmor1 = EquipmentManager.EquippedArmor1;
+        public Armor ReadiedArmor2 = EquipmentManager.EquippedArmor2;
+
+
+
+
+
         // player classes
         //(defName, jobTitle, HpBPL, atHp, JobAtkBonus, JobManaBonus, defSpecies,maxSL1, maxSL2, magType1, magType2, xp2LMulti, armorType1, armorType2, weaponType1, ArBonus)
-        public static ArchType Paladin => new ArchType("Medrin", "Paladin", 5, 50, 5,3, DragonKin, 3, 0, "Holy", "N/A", 13, "Plate", "N/A", "Melee", 5);
-        public static ArchType Bard => new ArchType("Tessa", "Bard", 2, 35, 2,2, DaemonKyne, 3, 6, "Healing", "Illusion", 11, "Leather", "N/A", "Melee", 2);
-        public static ArchType Cleric => new ArchType("Fray", "Cleric", 4, 40, 5, 5, Dwarf, 6, 6, "Holy", "Healing", 13, "ChainMail", "Shield", "Melee", 4);
-        public static ArchType Sorcerer => new ArchType("Garth", "Sorcerer", 1, 10, 1, 8, Human, 6, 6, "Arcane ", "Elemental", 12, "Cloth", "N/A", "Melee", 1);
-        public static ArchType Ranger => new ArchType("Nae'O'mii", "Ranger", 3, 30, 4, 2, Elf, 3, 5, "Nature", "N/A", 10, "Leather", "Buckler", "Ranged", 3);
-        public static ArchType Rogue => new ArchType("Kayleigh", "Rogue", 2, 20, 3, 1, SmallFolk, 4, 0, "Illusion", "N/A", 12, "leather", "N/A", "Melee", 2);
+        public static ArchType Paladin => new ArchType("Medrin", "Paladin", 5, 50, 5,3, DragonKin, 3, 0, 4, 0, 13, 4, 0, 1, 5);
+        public static ArchType Bard => new ArchType("Tessa", "Bard", 2, 35, 2,2, DaemonKyne, 3, 6, 5, 6, 11, 2, 0, 1, 2);
+        public static ArchType Cleric => new ArchType("Fray", "Cleric", 4, 40, 5, 5, Dwarf, 6, 6, 4, 5, 13, 3, 1, 1, 4);
+        public static ArchType Sorcerer => new ArchType("Garth", "Sorcerer", 1, 10, 1, 8, Human, 6, 6, 2, 1, 12, 1, 0, 1, 1);
+        public static ArchType Ranger => new ArchType("Nae'O'mii", "Ranger", 3, 30, 4, 2, Elf, 3, 5, 3, 0, 10, 2, 1, 2, 3);
+        public static ArchType Rogue => new ArchType("Kayleigh", "Rogue", 2, 20, 3, 1, SmallFolk, 4, 0, 6, 0, 12, 2, 0, 1, 2);
 
 
         //Enemy classes
         //(defName, jobTitle, HpBPL, atHp, JobAtkBonus, JobManaBonus, defSpecies,maxSL1, maxSL2, magType1, magType2, xp2LMulti, Armor, ArBonus)
-         public static ArchType Peon => new ArchType("", "Peon", 3, 30, 4, 2, Goblin, 3, 5, "N/A", "N/A", 10, "Cloth", "N/A", "Melee", 1);
-        public static ArchType Skirmisher => new ArchType("", "Skirmisher", 4, 40, 5, 5, Goblin, 6, 6, "N/A", "N/A", 13, "Leather", "Shield", "Melee", 2);
-        public static ArchType Warboss => new ArchType("", "WarBoss", 1, 10, 1, 8, HobGoblin, 6, 6, "N/A ", "N/A", 12, "Plate", "N/A", "Melee", 3);
-        public static ArchType Champion => new ArchType("", "Champion", 3, 30, 4, 2, Gnoll, 3, 5, "Arcane", "N/A", 10, "Chain", "Shield", "Melee", 3);
-        public static ArchType Shaman => new ArchType("", "Shaman", 2, 20, 3, 1, Gnoll, 4, 0, "Nature", "Elemental", 12, "Cloth", "N/A", "Melee", 2);
-        public static ArchType ClanChief => new ArchType("", "Clan Chief", 2, 20, 3, 1, Orc, 4, 0, "Arcane", "Healing", 12, "Plate", "Shield", "Melee", 4);
+         public static ArchType Peon => new ArchType("", "Peon", 3, 30, 4, 2, Goblin, 3, 5, 0, 0, 10, 0, 0, 1 , 1);
+        public static ArchType Skirmisher => new ArchType("", "Skirmisher", 4, 40, 5, 5, Goblin, 6, 6, 0, 0, 13, 2, 1, 2, 2);
+        public static ArchType Warboss => new ArchType("", "WarBoss", 1, 10, 1, 8, HobGoblin, 6, 6, 0, 0, 12, 4, 0, 1, 3);
+        public static ArchType Champion => new ArchType("", "Champion", 3, 30, 4, 2, Gnoll, 3, 5, 2, 0, 10, 3, 1, 1, 3);
+        public static ArchType Shaman => new ArchType("", "Shaman", 2, 20, 3, 1, Gnoll, 4, 0, 3, 1, 12, 1, 0, 1, 2);
+        public static ArchType ClanChief => new ArchType("", "Clan Chief", 2, 20, 3, 1, Orc, 4, 0, 2, 5, 12, 4, 1,1, 4);
 
         // NPC Classes
         //(defName, jobTitle, HpBPL, atHp, JobAtkBonus, JobManaBonus, defSpecies,maxSL1, maxSL2, magType1, magType2, xp2LMulti, Armor, ArBonus)
 
-        public static ArchType Peasant => new ArchType("", "Peasant", 4, 40, 5, 5, Goblin, 6, 6, "N/A", "N/A", 13, "Cloth", "N/A", "Melee", 4);
-        public static ArchType Merchant => new ArchType("", "Merchant", 1, 10, 1, 8, HobGoblin, 6, 6, "N/A ", "N/A", 12, "Cloth", "N/A", "Melee", 1);
-        public static ArchType Noble => new ArchType("", "Nobel", 3, 30, 4, 2, Goblin, 3, 5, "N/A", "N/A", 10, "Cloth", "N/A", "Melee", 3);
-        public static ArchType Guard => new ArchType("", "Guard", 2, 20, 3, 1, Gnoll, 4, 0, "N/A", "N/A", 12, "Leather", "Shield", "Ranged", 2);
-        public static ArchType Sheriff => new ArchType("", "Sheriff", 3, 30, 4, 2, Gnoll, 3, 5, "Illusion", "N/A", 10, "Chain", " Shield", "Melee", 3);
-        public static ArchType Knight => new ArchType("", "Knight", 2, 20, 3, 1, Orc, 4, 0, "Arcane", "Healing", 12, "Plate", "Shield", "Melee", 2);
+        public static ArchType Peasant => new ArchType("", "Peasant", 4, 40, 5, 5, Human, 6, 6, 0, 0, 13, 0, 0, 1, 4);
+        public static ArchType Merchant => new ArchType("", "Merchant", 1, 10, 1, 8, Human, 6, 6, 0, 0, 12, 1, 0, 1, 1);
+        public static ArchType Noble => new ArchType("", "Nobel", 3, 30, 4, 2, Human, 3, 5, 0, 0, 10, 1, 0, 1, 3);
+        public static ArchType Guard => new ArchType("", "Guard", 2, 20, 3, 1, Human, 4, 0, 0, 0, 12, 2, 1, 2, 2);
+        public static ArchType Sheriff => new ArchType("", "Sheriff", 3, 30, 4, 2, Human, 3, 5, 6, 0, 10, 3, 1, 1, 3);
+        public static ArchType Knight => new ArchType("", "Knight", 2, 20, 3, 1, Human, 4, 0, 2, 5, 12, 4,1 ,1 , 2);
 
     }
 }

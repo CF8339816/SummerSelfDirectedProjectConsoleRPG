@@ -15,8 +15,13 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public int ArmorMovementPenalty { get; set; }
         public string ArmorEquipped {  get; set; }  
 
-        public bool IsArmorEquipped = false;    
+        public bool IsArmorEquipped = false;
 
+
+        public Armor ReadiedArmor1;
+        public Armor ReadiedArmor2;
+
+        //0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default 
         public Armor(string itemType, string itemName, int itmBonBaseAC, int itmBonBaseHp, int itmBonBaseAtk, int itmBonBaseMana, int armorBonusAC, int armorMovementPenalty, int toughness, string armorType, string armorEquipped)
             : base(itemType, itemName, itmBonBaseAC, itmBonBaseHp, itmBonBaseAtk, itmBonBaseMana)
 
@@ -27,6 +32,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
             ArmorMovementPenalty = armorMovementPenalty;
             ArmorEquipped = ArmorEquipped;
         }
+
+        //Unarmored and Default
+        //(itemType, itemName, itmBonBaseAC, itmBonBaseHp, itmBonBaseAtk, itmBonBaseMana, armorBonusAC, armorMovementPenalty, toughness, armorType, armorEquipped)
+        public static Armor UnArmored => new Armor("Armor", "Work Clothes", 0, 0, 0, 0, 0, 0, 0, "Cloth", "No");
+        public static Armor DefaultArmor => new Armor("Armor", " 'HockeyPads' ", 0, 0, 0, 0, 1, 0, 2, "Cloth", "No");
 
         //Cloth
         //(itemType, itemName, itmBonBaseAC, itmBonBaseHp, itmBonBaseAtk, itmBonBaseMana, armorBonusAC, armorMovementPenalty, toughness, armorType, armorEquipped)

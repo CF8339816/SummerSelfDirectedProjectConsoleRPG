@@ -50,6 +50,7 @@
     <Compile Include="CombatManager.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="ElementalSpells.cs" />
+    <Compile Include="EquipmentManager.cs" />
     <Compile Include="GameManager.cs" />
     <Compile Include="HealingSpells.cs" />
     <Compile Include="HolySpells.cs" />
@@ -73,8 +74,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="map1.txt" />
-    <Content Include="map2.txt" />
+    <Content Include="map1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="map2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,7 +45,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static ArchSpecies Human => new ArchSpecies("Standard", "Human", 0,0, "N/A", "N/A", 0);
         public static ArchSpecies SmallFolk => new ArchSpecies("Keen", "SmallFolk", -4,0, "N/A", "N/A",  -2);
         public static ArchSpecies Orc => new ArchSpecies("Standard", "Orc", 0,0, "N/A", "N/A", 0);
-        public static ArchSpecies Goblin => new ArchSpecies("Standard", "Goblin", 0,0, "N /A", "N/A", 0);
+        public static ArchSpecies Goblin => new ArchSpecies("Standard", "Goblin", 0,0, "N/A", "N/A", 0);
         public static ArchSpecies HobGoblin => new ArchSpecies("Standard", "HobGoblin", 0,0, "N/A", "N/A", 0);
         public static ArchSpecies Gnoll => new ArchSpecies("Standard", "Gnoll", 0, 0, "N/A", "N/A", 0);
 

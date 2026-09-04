@@ -18,6 +18,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public int SpellAttackBonus { get; set; }
         public int ManaCost { get; set; }
 
+        //0= no magic, 1= Elemental, 2= Arcane, 3= Nature, 4= Holy, 5= Healing, 6= Illusion
 
         public ConsoleColor _targColor;
         public char _targSymbol { get; protected set; }
