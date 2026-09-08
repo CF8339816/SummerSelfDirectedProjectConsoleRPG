@@ -42,11 +42,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
         }
 
         public static ElementalSpells Sparks => new ElementalSpells("Elemental", "Sparks", 1, 1, 5, 1, 2, 0, 1, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static ElementalSpells FrostFire => new ElementalSpells("Elemental", "Frost Fire", 1, 1, 5, 1, 4, 1, 2, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static ElementalSpells Frozen => new ElementalSpells("Elemental", "Frozen", 1, 1, 15, 2, 6, 2, 4, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static ElementalSpells Fireball => new ElementalSpells("Elemental", "Fireball", 1, 2, 20, 4, 8, 3, 8, '@', ConsoleColor.Cyan, 5, 25); //, spellTargetX, spellTargetY, ((spellTargetX - 2), (spellTargetX + 2)), ((spellTargetY - 2),( spellTargetY + 2)));
-        public static ElementalSpells Blizzard => new ElementalSpells("Elemental", "Blizzard", 1, 4, 25, 8, 10, 4, 16, '@', ConsoleColor.Cyan, 9, 81); //, spellTargetX, spellTargetY, (spellTargetX - 4, spellTargetX + 4), (spellTargetY - 4, spellTargetY + 4));
-        public static ElementalSpells MeteorStrike => new ElementalSpells("Elemental", "Meteor Strike", 1, 8, 35, 16, 12, 5, 32, '@', ConsoleColor.Cyan, 21, 441); //, spellTargetX, spellTargetY, (spellTargetX - 10, spellTargetX + 10), (spellTargetY - 10, spellTargetY + 10));
+        public static ElementalSpells FrostFire => new ElementalSpells("Elemental", "Frost Fire", 2, 1, 5, 1, 4, 1, 2, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
+        public static ElementalSpells Frozen => new ElementalSpells("Elemental", "Frozen", 3, 1, 15, 2, 6, 2, 4, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
+        public static ElementalSpells Fireball => new ElementalSpells("Elemental", "Fireball", 4, 2, 20, 4, 8, 3, 8, '@', ConsoleColor.Cyan, 5, 25); //, spellTargetX, spellTargetY, ((spellTargetX - 2), (spellTargetX + 2)), ((spellTargetY - 2),( spellTargetY + 2)));
+        public static ElementalSpells Blizzard => new ElementalSpells("Elemental", "Blizzard", 5, 4, 25, 8, 10, 4, 16, '@', ConsoleColor.Cyan, 9, 81); //, spellTargetX, spellTargetY, (spellTargetX - 4, spellTargetX + 4), (spellTargetY - 4, spellTargetY + 4));
+        public static ElementalSpells MeteorStrike => new ElementalSpells("Elemental", "Meteor Strike", 6, 8, 35, 16, 12, 5, 32, '@', ConsoleColor.Cyan, 21, 441); //, spellTargetX, spellTargetY, (spellTargetX - 10, spellTargetX + 10), (spellTargetY - 10, spellTargetY + 10));
 
     }
 }

@@ -41,11 +41,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
         }
 
         public static HealingSpells CureMinorBooBoos => new HealingSpells("Healing", "Cure Minor Boo Boos", 1, 1, 5, 1, 2, 0, 1, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static HealingSpells RevitalizingVente => new HealingSpells("Healing", "Revitalizing Venti", 1, 1, 5, 1, 4, 1, 2, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static HealingSpells HealSeriousBooBoos  => new HealingSpells("Healing", "Heal Serious Boo Boos", 1, 1, 15, 2, 6, 2, 4, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static HealingSpells CurePoison => new HealingSpells("Healing", "Cure Poison", 1, 2, 20, 4, 8, 3, 8, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 2), (spellTargetX + 2)), ((spellTargetY - 2),( spellTargetY + 2)));
-        public static HealingSpells HealCriticalBooBoos => new HealingSpells("Healing", "Heal Critical Boo Boos", 1, 4, 25, 8, 10, 4, 16, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, (spellTargetX - 4, spellTargetX + 4), (spellTargetY - 4, spellTargetY + 4));
-        public static HealingSpells Resurection => new HealingSpells("Healing", "Resurection", 1, 8, 35, 16, 12, 5, 32, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, (spellTargetX - 10, spellTargetX + 10), (spellTargetY - 10, spellTargetY + 10));
+        public static HealingSpells RevitalizingVente => new HealingSpells("Healing", "Revitalizing Venti", 2, 1, 5, 1, 4, 1, 2, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
+        public static HealingSpells HealSeriousBooBoos  => new HealingSpells("Healing", "Heal Serious Boo Boos", 3, 1, 15, 2, 6, 2, 4, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
+        public static HealingSpells CurePoison => new HealingSpells("Healing", "Cure Poison", 4, 2, 20, 4, 8, 3, 8, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 2), (spellTargetX + 2)), ((spellTargetY - 2),( spellTargetY + 2)));
+        public static HealingSpells HealCriticalBooBoos => new HealingSpells("Healing", "Heal Critical Boo Boos", 5, 4, 25, 8, 10, 4, 16, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, (spellTargetX - 4, spellTargetX + 4), (spellTargetY - 4, spellTargetY + 4));
+        public static HealingSpells Resurection => new HealingSpells("Healing", "Resurection", 6, 8, 35, 16, 12, 5, 32, '@', ConsoleColor.Cyan, 1, 1); //, spellTargetX, spellTargetY, (spellTargetX - 10, spellTargetX + 10), (spellTargetY - 10, spellTargetY + 10));
 
     }
 }

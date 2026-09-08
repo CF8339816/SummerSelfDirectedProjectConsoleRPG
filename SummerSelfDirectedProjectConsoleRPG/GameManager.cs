@@ -4,6 +4,17 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
+using static SummerSelfDirectedProjectConsoleRPG.ArchType;
+using static SummerSelfDirectedProjectConsoleRPG.PC;
+using static SummerSelfDirectedProjectConsoleRPG.ElementalSpells;
+using static SummerSelfDirectedProjectConsoleRPG.ArcaneSpells;
+using static SummerSelfDirectedProjectConsoleRPG.HolySpells;
+using static SummerSelfDirectedProjectConsoleRPG.HealingSpells;
+using static SummerSelfDirectedProjectConsoleRPG.NatureSpells;
+using static SummerSelfDirectedProjectConsoleRPG.IllusionSpells;
+using static SummerSelfDirectedProjectConsoleRPG.Program;
+using static SummerSelfDirectedProjectConsoleRPG.MapLoader;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
@@ -22,32 +33,32 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
         public static bool isAlly = false; //sets bool to check for other allies in movement path
-        //public static bool IsTileOccupied(int x, int y)
-        //{
-        //    // moved the  tile check here  to see if it would stop the treasure and  captive spawns in the lava
-        //    int currentMap = MapManager.map._currentMapIndex;// checks using info from current map
-        //    char targetTile = MapManager.map._mapsCurrent[y][x];
-        //    char[] forbiddenTiles = { '#', 'w', '%', '|', 'M', '-', '+', 'S', '$', '&', '6', 'O', 'H', '@', '!', '*' };
-        //    if (Array.Exists(forbiddenTiles, t => t == targetTile))
-        //    { return true; }
-        //    // Check if player  is there
-        //    if (x == Program.Player._x && y == Program.Player._y)
-        //    { return true; }
-        //    // check for enemmies
-        //    if (Program.enemiesMap1.Any(enmy => enmy._x == x && enmy._y == y))
-        //    { return true; }
-        //    if (Program.enemiesMap2.Any(enmy => enmy._x == x && enmy._y == y))
-        //    { return true; }
-        //    if (Program.enemiesMap3.Any(enmy => enmy._x == x && enmy._y == y))
-        //    { return true; }
-        //    if (Program.enemyRiderList.Any(enmy => enmy._x == x && enmy._y == y))
-        //    { return true; }
-        //    // Check for gold spawn using current map's dictionary list
-        //    if (Program.MapTreasureRegistry.ContainsKey(currentMap))
-        //    {
-        //        if (Program.MapTreasureRegistry[currentMap].Any(g => g.x == x && g.y == y))/// checks positions from dictionary for current map
-        //        { return true; }
-        //    }
+                                           //public static bool IsTileOccupied(int x, int y)
+                                           //{
+                                           //    // moved the  tile check here  to see if it would stop the treasure and  captive spawns in the lava
+                                           //    int currentMap = MapManager.map._currentMapIndex;// checks using info from current map
+                                           //    char targetTile = MapManager.map._mapsCurrent[y][x];
+                                           //    char[] forbiddenTiles = { '#', 'w', '%', '|', 'M', '-', '+', 'S', '$', '&', '6', 'O', 'H', '@', '!', '*' };
+                                           //    if (Array.Exists(forbiddenTiles, t => t == targetTile))
+                                           //    { return true; }
+                                           //    // Check if player  is there
+                                           //    if (x == Program.Player._x && y == Program.Player._y)
+                                           //    { return true; }
+                                           //    // check for enemmies
+                                           //    if (Program.enemiesMap1.Any(enmy => enmy._x == x && enmy._y == y))
+                                           //    { return true; }
+                                           //    if (Program.enemiesMap2.Any(enmy => enmy._x == x && enmy._y == y))
+                                           //    { return true; }
+                                           //    if (Program.enemiesMap3.Any(enmy => enmy._x == x && enmy._y == y))
+                                           //    { return true; }
+                                           //    if (Program.enemyRiderList.Any(enmy => enmy._x == x && enmy._y == y))
+                                           //    { return true; }
+                                           //    // Check for gold spawn using current map's dictionary list
+                                           //    if (Program.MapTreasureRegistry.ContainsKey(currentMap))
+                                           //    {
+                                           //        if (Program.MapTreasureRegistry[currentMap].Any(g => g.x == x && g.y == y))/// checks positions from dictionary for current map
+                                           //        { return true; }
+                                           //    }
 
         //    if (Program.MapOrbRegistry.ContainsKey(currentMap))
         //    {
@@ -73,16 +84,18 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
 
+
+
         //m1
 
         public static void Gameon()
             
         {  
             bool isPlaying = true;
-
+ 
             while (isPlaying)
             {
-
+               
                 int plX = 0, plY = 0;
                 ConsoleKey input = Console.ReadKey(true).Key;
                 // move player with W,A,S,D or optional arrow keys 

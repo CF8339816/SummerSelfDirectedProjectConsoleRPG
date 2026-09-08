@@ -41,11 +41,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
         }
 
         public static HolySpells GuidingHand => new HolySpells("Holy", "Guiding Hand", 1, 1, 5, 1, 2, 0, 1, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static HolySpells Cloister => new HolySpells("Holy", "Cloister", 1, 1, 5, 1, 4, 1, 2, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static HolySpells DivineSmite => new HolySpells("Holy", "Divine Smite", 1, 1, 15, 2, 6, 2, 4, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static HolySpells BlessingsOfProtection => new HolySpells("Holy", "Blessings Of Protection", 1, 2, 20, 4, 8, 3, 8, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 2), (spellTargetX + 2)), ((spellTargetY - 2),( spellTargetY + 2)));
-        public static HolySpells InnerStrength => new HolySpells("Holy", "Inner Strength", 1, 4, 25, 8, 10, 4, 16, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, (spellTargetX - 4, spellTargetX + 4), (spellTargetY - 4, spellTargetY + 4));
-        public static HolySpells DeityPattyCake => new HolySpells("Holy", "Deity PattyCake", 1, 8, 35, 16, 12, 5, 32, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, (spellTargetX - 10, spellTargetX + 10), (spellTargetY - 10, spellTargetY + 10));
+        public static HolySpells Cloister => new HolySpells("Holy", "Cloister", 2, 1, 5, 1, 4, 1, 2, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
+        public static HolySpells DivineSmite => new HolySpells("Holy", "Divine Smite", 3, 1, 15, 2, 6, 2, 4, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
+        public static HolySpells BlessingsOfProtection => new HolySpells("Holy", "Blessings Of Protection", 4, 2, 20, 4, 8, 3, 8, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 2), (spellTargetX + 2)), ((spellTargetY - 2),( spellTargetY + 2)));
+        public static HolySpells InnerStrength => new HolySpells("Holy", "Inner Strength", 5, 4, 25, 8, 10, 4, 16, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, (spellTargetX - 4, spellTargetX + 4), (spellTargetY - 4, spellTargetY + 4));
+        public static HolySpells DeityPattyCake => new HolySpells("Holy", "Deity PattyCake", 6, 8, 35, 16, 12, 5, 32, '@', ConsoleColor.Yellow, 1, 1); //, spellTargetX, spellTargetY, (spellTargetX - 10, spellTargetX + 10), (spellTargetY - 10, spellTargetY + 10));
 
     }
 }

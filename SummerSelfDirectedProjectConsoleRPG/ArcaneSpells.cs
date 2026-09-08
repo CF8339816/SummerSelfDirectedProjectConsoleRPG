@@ -41,11 +41,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
         }
 
         public static ArcaneSpells MagicMissile => new ArcaneSpells("Arcane", "Magic Missile", 1, 1, 5, 1, 2, 0, 1, '@', ConsoleColor.Gray, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static ArcaneSpells BlindingSparkles => new ArcaneSpells("Arcane", "Blinding Sparkles", 1, 1, 5, 1, 4, 1, 2, '@', ConsoleColor.Gray, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static ArcaneSpells ImprovedMagicMissile => new ArcaneSpells("Arcane", "Improved Magic Missile", 1, 1, 15, 2, 6, 2, 4, '@', ConsoleColor.Gray, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
-        public static ArcaneSpells Sleepytimes => new ArcaneSpells("Arcane", "Sleepytimes", 1, 2, 20, 4, 8, 3, 8, '@', ConsoleColor.Gray, 5, 25); //, spellTargetX, spellTargetY, ((spellTargetX - 2), (spellTargetX + 2)), ((spellTargetY - 2),( spellTargetY + 2)));
-        public static ArcaneSpells GreaterMagicMissile => new ArcaneSpells("Arcane", "Greater Magic Missile", 1, 4, 25, 8, 10, 4, 16, '@', ConsoleColor.Gray, 3, 9); //, spellTargetX, spellTargetY, (spellTargetX - 4, spellTargetX + 4), (spellTargetY - 4, spellTargetY + 4));
-        public static ArcaneSpells ArcaneMalestrom => new ArcaneSpells("Arcane", "Arcane Malestrom", 1, 8, 35, 16, 12, 5, 32, '@', ConsoleColor.Gray, 5, 25); //, spellTargetX, spellTargetY, (spellTargetX - 10, spellTargetX + 10), (spellTargetY - 10, spellTargetY + 10));
+        public static ArcaneSpells BlindingSparkles => new ArcaneSpells("Arcane", "Blinding Sparkles", 2, 1, 5, 1, 4, 1, 2, '@', ConsoleColor.Gray, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
+        public static ArcaneSpells ImprovedMagicMissile => new ArcaneSpells("Arcane", "Improved Magic Missile", 3, 1, 15, 2, 6, 2, 4, '@', ConsoleColor.Gray, 1, 1); //, spellTargetX, spellTargetY, ((spellTargetX - 0), (spellTargetX + 0)), ((spellTargetY - 0), (spellTargetY + 0)));
+        public static ArcaneSpells Sleepytimes => new ArcaneSpells("Arcane", "Sleepytimes", 4, 2, 20, 4, 8, 3, 8, '@', ConsoleColor.Gray, 5, 25); //, spellTargetX, spellTargetY, ((spellTargetX - 2), (spellTargetX + 2)), ((spellTargetY - 2),( spellTargetY + 2)));
+        public static ArcaneSpells GreaterMagicMissile => new ArcaneSpells("Arcane", "Greater Magic Missile", 5, 4, 25, 8, 10, 4, 16, '@', ConsoleColor.Gray, 3, 9); //, spellTargetX, spellTargetY, (spellTargetX - 4, spellTargetX + 4), (spellTargetY - 4, spellTargetY + 4));
+        public static ArcaneSpells ArcaneMalestrom => new ArcaneSpells("Arcane", "Arcane Malestrom", 6, 8, 35, 16, 12, 5, 32, '@', ConsoleColor.Gray, 5, 25); //, spellTargetX, spellTargetY, (spellTargetX - 10, spellTargetX + 10), (spellTargetY - 10, spellTargetY + 10));
 
     }
 }

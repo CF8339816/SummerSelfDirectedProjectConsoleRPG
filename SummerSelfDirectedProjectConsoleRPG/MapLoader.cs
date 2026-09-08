@@ -5,6 +5,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Security.Cryptography;
+using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
+using static SummerSelfDirectedProjectConsoleRPG.ArchType;
+using static SummerSelfDirectedProjectConsoleRPG.PC;
+using static SummerSelfDirectedProjectConsoleRPG.Program;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
