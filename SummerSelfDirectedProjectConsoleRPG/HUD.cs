@@ -23,6 +23,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static string _Species;
         public static ArchType Defaultspecies { get; set; }
 
+    
         public static Armor armor1Type { get; set; }
         public static string _armor1;
         public static Armor armor2Type { get; set; }
@@ -310,6 +311,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static void SetArmor1()
         {
             bool Armor1 = false;
+            Console.WriteLine("Please choose the Armor you would like to ready from the following list:\n 0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default class armor ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+
+            int SetAr1= Convert.ToInt32(Console.ReadLine());
+
             //0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default 
 
             while (!Armor1)
@@ -322,7 +328,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         armor1Type = Armor.UnArmored;
                         _armor1 = "Unarmored";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
+                        Console.WriteLine("You have removed your Armor... 'Nekkie, nekkie, eggs and baccie.");
                         Armor1 = true;
                         break;
                    
@@ -330,7 +336,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         armor1Type = Armor.wornCloth;
                         _armor1 = "Cloth";
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
+                            Console.WriteLine("You have readied Cloth Armor...' Comefortable and warm...'");
                         Armor1 = true;
                             break;
 
@@ -338,7 +344,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                     armor1Type = Armor.wornLeather;
                     _armor1 = "Leather";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a DaemonKyne,\n 'My parents? .....Well... It's complicated.'");
+                        Console.WriteLine("You have  readied Lether Armor...'Stylish and rugged...'");
                     Armor1 = true;
                         break;
 
@@ -346,7 +352,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                     armor1Type = Armor.wornChain;
                     _armor1 = "Chain";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a Dwarf,\n 'If ye Likem Hairy...I got whatcha want!'");
+                        Console.WriteLine("You have readied Chain Armor...'Classic protection...'");
                     Armor1 = true;
                         break;
 
@@ -354,18 +360,42 @@ namespace SummerSelfDirectedProjectConsoleRPG
                     armor1Type = Armor.wornPlate;
                     _armor1 = "Plate";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not want to know...'");
+                        Console.WriteLine("You have  readied Plate Armor...'Durable and strong, like a crab with a knofe...'");
                     Armor1 = true;
                         break;
 
                      
-
                     default:
-                        if (ArchType ArcJob)
+
+                        if (HUD.jobType == ArchType.Paladin)
                         {
-                            armor1Type = Armor.wornPlate;
+                            SetAr1 = 4;
+                        }
+                        else if (HUD.jobType == ArchType.Cleric)
+                        {
+                            SetAr1 = 3;
+                        }
+                        else if (HUD.jobType == ArchType.Bard)
+                        {
+                            SetAr1 = 2;
                         }
 
+                        else if (HUD.jobType == ArchType.Rogue)
+                        {
+                            SetAr1 = 2;
+                        }
+                        else if (HUD.jobType == ArchType.Ranger)
+                        {
+                            SetAr1 = 2;
+                        }
+                        else if (HUD.jobType == ArchType.Sorcerer)
+                        {
+                            SetAr1 = 1;
+                        }
+                        else
+                        {
+                            SetAr1 = 0;
+                        }
                         break;
                 }
             }
