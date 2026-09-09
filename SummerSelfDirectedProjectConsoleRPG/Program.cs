@@ -32,7 +32,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public ArchType _ArchType = HUD.jobType;
         public ArchSpecies _ArchSpecies = HUD.SpeciesChoice;
 
-        public static MapLoader map = new MapLoader();
+      //  public static MapLoader map = new MapLoader();
        
 
 
@@ -55,10 +55,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
             Console.ReadKey(true);
             Console.Clear();
-           // MapLoader.DrawMap();
+           MapManager.map.DrawMap();
             HUD.Instructions();
             Console.ReadKey(true);
-           // MapLoader.LoadMap();
+           
+
             GameManager.Gameon();
 
            

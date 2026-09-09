@@ -51,6 +51,7 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="ElementalSpells.cs" />
     <Compile Include="EquipmentManager.cs" />
+    <Compile Include="EventManager.cs" />
     <Compile Include="GameManager.cs" />
     <Compile Include="HealingSpells.cs" />
     <Compile Include="HolySpells.cs" />
