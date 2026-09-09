@@ -33,32 +33,33 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
         public static bool isAlly = false; //sets bool to check for other allies in movement path
-                                           //public static bool IsTileOccupied(int x, int y)
-                                           //{
-                                           //    // moved the  tile check here  to see if it would stop the treasure and  captive spawns in the lava
-                                           //    int currentMap = MapManager.map._currentMapIndex;// checks using info from current map
-                                           //    char targetTile = MapManager.map._mapsCurrent[y][x];
-                                           //    char[] forbiddenTiles = { '#', 'w', '%', '|', 'M', '-', '+', 'S', '$', '&', '6', 'O', 'H', '@', '!', '*' };
-                                           //    if (Array.Exists(forbiddenTiles, t => t == targetTile))
-                                           //    { return true; }
-                                           //    // Check if player  is there
-                                           //    if (x == Program.Player._x && y == Program.Player._y)
-                                           //    { return true; }
-                                           //    // check for enemmies
-                                           //    if (Program.enemiesMap1.Any(enmy => enmy._x == x && enmy._y == y))
-                                           //    { return true; }
-                                           //    if (Program.enemiesMap2.Any(enmy => enmy._x == x && enmy._y == y))
-                                           //    { return true; }
-                                           //    if (Program.enemiesMap3.Any(enmy => enmy._x == x && enmy._y == y))
-                                           //    { return true; }
-                                           //    if (Program.enemyRiderList.Any(enmy => enmy._x == x && enmy._y == y))
-                                           //    { return true; }
-                                           //    // Check for gold spawn using current map's dictionary list
-                                           //    if (Program.MapTreasureRegistry.ContainsKey(currentMap))
-                                           //    {
-                                           //        if (Program.MapTreasureRegistry[currentMap].Any(g => g.x == x && g.y == y))/// checks positions from dictionary for current map
-                                           //        { return true; }
-                                           //    }
+                                          
+        //public static bool IsTileOccupied(int x, int y)
+        //{
+        //    // moved the  tile check here  to see if it would stop the treasure and  captive spawns in the lava
+        //    int currentMap = MapManager.map._currentMapIndex;// checks using info from current map
+        //    char targetTile = MapManager.map._mapsCurrent[y][x];
+        //    char[] forbiddenTiles = { '#', 'w', '%', '|', 'M', '-', '+', 'S', '$', '&', '6', 'O', 'H', '@', '!', '*' };
+        //    if (Array.Exists(forbiddenTiles, t => t == targetTile))
+        //    { return true; }
+        //    // Check if player  is there
+        //    if (x == Program.Player._x && y == Program.Player._y)
+        //    { return true; }
+        //    // check for enemmies
+        //    if (Program.enemiesMap1.Any(enmy => enmy._x == x && enmy._y == y))
+        //    { return true; }
+        //    if (Program.enemiesMap2.Any(enmy => enmy._x == x && enmy._y == y))
+        //    { return true; }
+        //    if (Program.enemiesMap3.Any(enmy => enmy._x == x && enmy._y == y))
+        //    { return true; }
+        //    if (Program.enemyRiderList.Any(enmy => enmy._x == x && enmy._y == y))
+        //    { return true; }
+        //    // Check for gold spawn using current map's dictionary list
+        //    if (Program.MapTreasureRegistry.ContainsKey(currentMap))
+        //    {
+        //        if (Program.MapTreasureRegistry[currentMap].Any(g => g.x == x && g.y == y))/// checks positions from dictionary for current map
+        //        { return true; }
+        //    }
 
         //    if (Program.MapOrbRegistry.ContainsKey(currentMap))
         //    {
