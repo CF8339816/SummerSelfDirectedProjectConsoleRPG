@@ -38,6 +38,9 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         static void Main()
         {
+
+            
+
             HUD.ChooseMyClass();
             HUD.ChooseMySpecies();
             HUD.NameMyCharacter();
