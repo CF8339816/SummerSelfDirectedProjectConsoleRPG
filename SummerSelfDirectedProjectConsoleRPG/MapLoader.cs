@@ -174,6 +174,26 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 case ']': Console.ForegroundColor = ConsoleColor.DarkGray; Console.BackgroundColor = ConsoleColor.Gray; break;
                 case 'X': Console.ForegroundColor = ConsoleColor.White; Console.BackgroundColor = ConsoleColor.Gray; break;
                 case '`': Console.ForegroundColor = ConsoleColor.DarkYellow; Console.BackgroundColor = ConsoleColor.Yellow; break;
+
+                case '_': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case ';': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case '4': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case '0': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case '/': Console.ForegroundColor = ConsoleColor.Yellow; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'Y': Console.ForegroundColor = ConsoleColor.White; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'C': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'a': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 's': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'i': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'h': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'd': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'P': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'c': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'b': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case 'l': Console.ForegroundColor = ConsoleColor.Magenta; Console.BackgroundColor = ConsoleColor.Black; break;
+                case '(': Console.ForegroundColor = ConsoleColor.White; Console.BackgroundColor = ConsoleColor.Black; break;
+                case ')': Console.ForegroundColor = ConsoleColor.White; Console.BackgroundColor = ConsoleColor.Black; break;
+               
                 default: Console.ForegroundColor = ConsoleColor.Black; Console.BackgroundColor = ConsoleColor.Black; break;
             }
         }

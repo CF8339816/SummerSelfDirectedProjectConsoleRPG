@@ -61,6 +61,7 @@
     <Compile Include="Inventory.cs" />
     <Compile Include="InventoryManager.cs" />
     <Compile Include="KeyItem.cs" />
+    <Compile Include="MagicManager.cs" />
     <Compile Include="MapLoader.cs" />
     <Compile Include="MapManager.cs" />
     <Compile Include="NatureSpells.cs" />

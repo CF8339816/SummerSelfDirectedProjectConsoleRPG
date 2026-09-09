@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
-    internal class UseItem
+    public class UseItem
     {
+
+
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
-    internal class EventManager
+   public class EventManager
     {
     }
 }

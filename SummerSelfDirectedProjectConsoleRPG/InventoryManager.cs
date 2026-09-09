@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
-    internal class InventoryManager
+    public class InventoryManager
     {
+
+
+
+
     }
 }
