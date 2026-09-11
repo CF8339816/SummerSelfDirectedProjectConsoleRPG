@@ -306,8 +306,28 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
         //m8
+        public static void PlayerStats()
+        {
+            Console.SetCursorPosition(2, 2);
+            Console.Write($"\u001b[33m Name: \u001b[36m{Player.Name}\u001b[33m |" );
+            Console.Write($"\u001b[33m Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m |");
+            Console.Write($"\u001b[33m Profession: \u001b[36m{Player.ArcJob.JobTitle}\u001b[33m |" );
+            Console.SetCursorPosition(2, 3);
+            Console.Write($"\u001b[33m HP: \u001b[36m{Program.PlayerHp}\u001b[33m |");
+            Console.Write($"\u001b[33m MP: \u001b[36m{Program.PlayerMP}\u001b[33m |");
+            Console.Write($"\u001b[33m AC: \u001b[36m{Program.PlayerAC}\u001b[33m |");
+            Console.Write($"\u001b[33m Atk: \u001b[36m{Program.PlayerATK}\u001b[33m |");
+        }
+
+        //m9
+
+        public static void EnemyStats()
+        {
+            
+        }
 
 
+        //m10
         public static void SetArmor1()
         {
             bool Armor1 = false;
