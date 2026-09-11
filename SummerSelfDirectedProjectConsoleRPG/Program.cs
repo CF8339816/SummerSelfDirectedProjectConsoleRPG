@@ -2,20 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using static SummerSelfDirectedProjectConsoleRPG.ArcaneSpells;
 using static SummerSelfDirectedProjectConsoleRPG.ArchSpecies;
 using static SummerSelfDirectedProjectConsoleRPG.ArchType;
-using static SummerSelfDirectedProjectConsoleRPG.PC;
 using static SummerSelfDirectedProjectConsoleRPG.ElementalSpells;
-using static SummerSelfDirectedProjectConsoleRPG.ArcaneSpells;
-using static SummerSelfDirectedProjectConsoleRPG.HolySpells;
 using static SummerSelfDirectedProjectConsoleRPG.HealingSpells;
-using static SummerSelfDirectedProjectConsoleRPG.NatureSpells;
+using static SummerSelfDirectedProjectConsoleRPG.HolySpells;
 using static SummerSelfDirectedProjectConsoleRPG.IllusionSpells;
-using static SummerSelfDirectedProjectConsoleRPG.Program;
 using static SummerSelfDirectedProjectConsoleRPG.MapLoader;
+using static SummerSelfDirectedProjectConsoleRPG.NatureSpells;
+using static SummerSelfDirectedProjectConsoleRPG.PC;
+using static SummerSelfDirectedProjectConsoleRPG.Program;
 
 namespace SummerSelfDirectedProjectConsoleRPG
 {
@@ -32,14 +34,49 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public ArchType _ArchType = HUD.jobType;
         public ArchSpecies _ArchSpecies = HUD.SpeciesChoice;
 
-      //  public static MapLoader map = new MapLoader();
-       
+        //  public static MapLoader map = new MapLoader();
+        #region forced Maximize Startup
+        [DllImport("user32.dll")]
+        private static extern IntPtr GetForegroundWindow();
 
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        // 2. Define the 'Maximize' command constant
+        private const int SW_RESTORE = 9;   // Unlocks the layout constraints
+        private const int SW_MAXIMIZE = 3;
+        #endregion
 
         static void Main()
         {
 
-            
+            #region Startup Maxixization
+            Thread.Sleep(50);
+            IntPtr handle = GetForegroundWindow();
+            if (handle != IntPtr.Zero)
+            {
+                ShowWindow(handle, SW_RESTORE);
+                ShowWindow(handle, SW_MAXIMIZE);
+            }
+
+            #endregion
+
+            Console.SetCursorPosition(25, 5);
+            Console.WriteLine(" hi the console window should be maximized. \n\n           If it is not, please Maximize screen at this time to avoid load errors");
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.SetCursorPosition(25,7);
+            Console.WriteLine("Have you done it yet if yes good for you press a key.. \n\n           if not....\n \n        Shame on a thousand generatins of your family line..........and please maximise screen now. ");
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.SetCursorPosition(25, 11);
+            Console.WriteLine("Remember we warned you...");
+            Console.ReadKey(true);
+            Console.Clear();
+
+
 
             HUD.ChooseMyClass();
             HUD.ChooseMySpecies();
@@ -58,8 +95,10 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
             Console.ReadKey(true);
             Console.Clear();
-            HUD.PlayerStats(Player);
            MapManager.map.DrawMap();
+            HUD.PlayerStats(Player);
+            HUD.EnemyStats();
+
             HUD.Instructions();
             Console.ReadKey(true);
            

@@ -21,10 +21,9 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static string _Job;
         public static ArchSpecies SpeciesChoice { get; set; }
         public static string _Species;
-        public static ArchType Defaultspecies { get; set; }
+        public static ArchType Defaultspecies;
 
-
-
+        public static int SetAr1 { get; set; }
         public static string SpellSchool1 { get; set; }
         public static string SpellSchool2 { get; set; }
         public static Armor armor1Type { get; set; }
@@ -153,7 +152,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 }
             }
 
-       
+
+        
         }
 
 
@@ -264,7 +264,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         public static void Instructions()
         {
-            Console.SetCursorPosition(0, 26);
+            Console.SetCursorPosition(0, 38);
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("Press any Key to start... Use W,A,S,D  or arrow keys to move around the map...Press 'Q' to exit...\n" +
                 "Fight enemies by manouvering to them or try to avoid them...\n" +
@@ -291,6 +291,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
        public static void PcCreatinConfirmation(PC Player)
         {
+            SpellSchool(Player);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"--- Character Creation Complete ---");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -311,25 +312,27 @@ namespace SummerSelfDirectedProjectConsoleRPG
         //m8
         public static void PlayerStats(PC Player)
         {
-             Console.SetCursorPosition(58, 1);
+            SpellSchool(Player);
+            Console.SetCursorPosition(60, 1);
             Console.Write($"\u001b[32m PLAYER STATS");
-            Console.SetCursorPosition(58, 2);
+            Console.SetCursorPosition(60, 2);
             Console.Write($"\u001b[33m Name: \u001b[36m{Player.Name}\u001b[33m |" );
             Console.Write($"\u001b[33m Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m |");
             Console.Write($"\u001b[33m Profession: \u001b[36m{Player.ArcJob.JobTitle}\u001b[33m |" );
-            Console.SetCursorPosition(58, 3);
+            Console.SetCursorPosition(60, 3);
             Console.Write($"\u001b[33m HP: \u001b[36m{Program.PlayerHp}\u001b[33m |");
             Console.Write($"\u001b[33m MP: \u001b[36m{Program.PlayerMP}\u001b[33m |");
             Console.Write($"\u001b[33m AC: \u001b[36m{Program.PlayerAC}\u001b[33m |");
             Console.Write($"\u001b[33m Atk: \u001b[36m{Program.PlayerATK}\u001b[33m |");
-            Console.SetCursorPosition(58, 4);
+            Console.SetCursorPosition(60, 4);
             Console.Write($"\u001b[33m Magic School 1: \u001b[36m{HUD.SpellSchool1}\u001b[33m |");
             Console.Write($"\u001b[33m Max Spell Level: \u001b[36m{Player.ArcJob.MaxSpellLevel1}\u001b[33m |");
+            Console.SetCursorPosition(60, 5);
             Console.Write($"\u001b[33m Magic School 2: \u001b[36m{HUD.SpellSchool2}\u001b[33m |");
             Console.Write($"\u001b[33m Max Spell Level: \u001b[36m{Player.ArcJob.MaxSpellLevel2}\u001b[33m |");
-            Console.SetCursorPosition(58, 5);
-            Console.Write($"\u001b[33m Level: \u001b[36m{Program.PlayerHp}\u001b[33m |");
-            Console.Write($"\u001b[33m XP: \u001b[36m{Program.PlayerMP}\u001b[33m |");
+            Console.SetCursorPosition(60, 6);
+            Console.Write($"\u001b[33m Level: \u001b[36m{Player.plLevel}\u001b[33m |");
+            Console.Write($"\u001b[33m XP: \u001b[36m{Player.plXP}\u001b[33m |");
             //Console.Write($"\u001b[33m AC: \u001b[36m{Program.PlayerAC}\u001b[33m |");
             //Console.Write($"\u001b[33m Atk: \u001b[36m{Program.PlayerATK}\u001b[33m |");
         }
@@ -338,7 +341,17 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         public static void EnemyStats()
         {
-            
+            //SpellSchool(Enemy);
+            Console.SetCursorPosition(60, 8);
+            Console.Write($"\u001b[31m ENEMY STATS");
+            Console.SetCursorPosition(60, 9);
+            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.Write($"\u001b[33m Species: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.Write($"\u001b[33m Profession: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.SetCursorPosition(60, 10);
+            Console.Write($"\u001b[33m HP: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.Write($"\u001b[33m MP: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.Write($"\u001b[33m AC: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
         }
 
 
@@ -346,11 +359,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static void SetArmor1()
         {
             bool Armor1 = false;
-            Console.WriteLine("Please choose the Armor you would like to ready from the following list:\n 0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default class armor ");
-            Console.ForegroundColor = ConsoleColor.Blue;
+            //Console.WriteLine("Please choose the Armor you would like to ready from the following list:\n 0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default class armor ");
+            //Console.ForegroundColor = ConsoleColor.Blue;
 
-            int SetAr1= Convert.ToInt32(Console.ReadLine());
-
+            //int SetAr1= Convert.ToInt32(Console.ReadLine());
+          
             //0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default 
 
             while (!Armor1)
@@ -434,6 +447,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         break;
                 }
             }
+
         }
 
         //m11
@@ -509,6 +523,40 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 SpellSchool2 = "N/A";
             }
         }
+
+        //m12
+
+        public static void InfoBlock()
+        {
+            Console.SetCursorPosition(0, 30);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("|--------------------- Info Block ----------------------|");
+           
+            Console.SetCursorPosition(0, 31);
+            Console.Write($"\u001b[33m You have encountered an enemy would you like to attack 1 or defend 2: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.SetCursorPosition(0, 32);
+            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.SetCursorPosition(0, 33);
+            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.SetCursorPosition(0, 34);
+            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.SetCursorPosition(0, 35);
+            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+
+            Console.SetCursorPosition(0, 36);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("+-------------------------------------------------------+");
+        }
+
+
+
+
+
+
+
+
+
+
     }
 
 
