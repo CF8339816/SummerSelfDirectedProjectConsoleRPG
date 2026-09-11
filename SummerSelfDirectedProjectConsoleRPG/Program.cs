@@ -58,6 +58,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
             Console.ReadKey(true);
             Console.Clear();
+            HUD.PlayerStats(Player);
            MapManager.map.DrawMap();
             HUD.Instructions();
             Console.ReadKey(true);

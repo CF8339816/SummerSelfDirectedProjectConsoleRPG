@@ -23,7 +23,10 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static string _Species;
         public static ArchType Defaultspecies { get; set; }
 
-    
+
+
+        public static string SpellSchool1 { get; set; }
+        public static string SpellSchool2 { get; set; }
         public static Armor armor1Type { get; set; }
         public static string _armor1;
         public static Armor armor2Type { get; set; }
@@ -295,7 +298,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
             Console.WriteLine($"Class: \u001b[36m{Player.ArcJob.JobTitle} \u001b[33mArchetype  | Player Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m");
             Console.WriteLine($"HP: \u001b[36m{Program.PlayerHp} \u001b[33m  | AC: \u001b[36m{Program.PlayerAC}\u001b[33m");
             Console.WriteLine($"Granted Spells: \u001b[36m{Player.ArcSpecies.BonusSpellsSpecies1} \u001b[33m | \u001b[36m{Player.ArcSpecies.BonusSpellsSpecies2}\u001b[33m");
-            Console.WriteLine($"Magic type 1:\u001b[36m {Player.ArcJob.MagicType1} \u001b[33m | Magic type 2: \u001b[36m{Player.ArcJob.MagicType2}\u001b[33m");
+            Console.WriteLine($"Magic type 1:\u001b[36m {HUD.SpellSchool1} \u001b[33m | Magic type 2: \u001b[36m{HUD.SpellSchool2}\u001b[33m");
             Console.WriteLine($"Max Level Magic type 1: \u001b[36m{Player.ArcJob.MaxSpellLevel1} \u001b[33m | Max Level Magic type 2: \u001b[36m{Player.ArcJob.MaxSpellLevel2}\u001b[33m");
             Console.WriteLine($"Player Icon: \u001b[36m{Player._symbol} \u001b[33m | Icon Color: \u001b[36m{Player._color}\u001b[33m");
             Console.WriteLine($"Player Attack: \u001b[36m{Program.PlayerATK} \u001b[33m | Player Mana: \u001b[36m{Program.PlayerMP}\u001b[33m");
@@ -306,17 +309,29 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
         //m8
-        public static void PlayerStats()
+        public static void PlayerStats(PC Player)
         {
-            Console.SetCursorPosition(2, 2);
+             Console.SetCursorPosition(58, 1);
+            Console.Write($"\u001b[32m PLAYER STATS");
+            Console.SetCursorPosition(58, 2);
             Console.Write($"\u001b[33m Name: \u001b[36m{Player.Name}\u001b[33m |" );
             Console.Write($"\u001b[33m Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m |");
             Console.Write($"\u001b[33m Profession: \u001b[36m{Player.ArcJob.JobTitle}\u001b[33m |" );
-            Console.SetCursorPosition(2, 3);
+            Console.SetCursorPosition(58, 3);
             Console.Write($"\u001b[33m HP: \u001b[36m{Program.PlayerHp}\u001b[33m |");
             Console.Write($"\u001b[33m MP: \u001b[36m{Program.PlayerMP}\u001b[33m |");
             Console.Write($"\u001b[33m AC: \u001b[36m{Program.PlayerAC}\u001b[33m |");
             Console.Write($"\u001b[33m Atk: \u001b[36m{Program.PlayerATK}\u001b[33m |");
+            Console.SetCursorPosition(58, 4);
+            Console.Write($"\u001b[33m Magic School 1: \u001b[36m{HUD.SpellSchool1}\u001b[33m |");
+            Console.Write($"\u001b[33m Max Spell Level: \u001b[36m{Player.ArcJob.MaxSpellLevel1}\u001b[33m |");
+            Console.Write($"\u001b[33m Magic School 2: \u001b[36m{HUD.SpellSchool2}\u001b[33m |");
+            Console.Write($"\u001b[33m Max Spell Level: \u001b[36m{Player.ArcJob.MaxSpellLevel2}\u001b[33m |");
+            Console.SetCursorPosition(58, 5);
+            Console.Write($"\u001b[33m Level: \u001b[36m{Program.PlayerHp}\u001b[33m |");
+            Console.Write($"\u001b[33m XP: \u001b[36m{Program.PlayerMP}\u001b[33m |");
+            //Console.Write($"\u001b[33m AC: \u001b[36m{Program.PlayerAC}\u001b[33m |");
+            //Console.Write($"\u001b[33m Atk: \u001b[36m{Program.PlayerATK}\u001b[33m |");
         }
 
         //m9
@@ -420,15 +435,93 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 }
             }
         }
+
+        //m11
+
+        public static void SpellSchool(PC Player)
+        {
+
+            if (Player.ArcJob.MagicType1 == 0)
+            {
+                SpellSchool1 = "N/A";
+            }
+                else if (Player.ArcJob.MagicType1 == 1)
+            {
+                SpellSchool1 = "Elemental";
+            }
+            else if (Player.ArcJob.MagicType1 == 2)
+            {
+                SpellSchool1 = "Arcane";
+            }
+            else if (Player.ArcJob.MagicType1 == 3)
+            {
+                SpellSchool1 = "Nature";
+            }
+
+            else if (Player.ArcJob.MagicType1 == 4)
+            {
+                SpellSchool1 = "Holy";
+            }
+            else if (Player.ArcJob.MagicType1 == 5)
+            {
+                SpellSchool1 = "Healing";
+            }
+            else if (Player.ArcJob.MagicType1 == 6)
+            {
+                SpellSchool1 = "Illusion";
+            }
+            else
+            {
+                SpellSchool1 = "N/A";
+            }
+
+            if (Player.ArcJob.MagicType2 == 0)
+            {
+                SpellSchool2 = "N/A";
+            }
+            else if (Player.ArcJob.MagicType2 == 1)
+            {
+                SpellSchool2 = "Elemental";
+            }
+            else if (Player.ArcJob.MagicType2 == 2)
+            {
+                SpellSchool2 = "Arcane";
+            }
+            else if (Player.ArcJob.MagicType2 == 3)
+            {
+                SpellSchool2 = "Nature";
+            }
+
+            else if (Player.ArcJob.MagicType2 == 4)
+            {
+                SpellSchool2 = "Holy";
+            }
+            else if (Player.ArcJob.MagicType2 == 5)
+            {
+                SpellSchool2 = "Healing";
+            }
+            else if (Player.ArcJob.MagicType2 == 6)
+            {
+                SpellSchool2 = "Illusion";
+            }
+            else
+            {
+                SpellSchool2 = "N/A";
+            }
+        }
     }
-
-
-
-
-
-
 
 
 }
 
 
+
+
+
+
+
+
+
+
+
+ 
