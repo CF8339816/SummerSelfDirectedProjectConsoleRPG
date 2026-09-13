@@ -16,7 +16,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
     public class HUD
     {
         public const int MaxNameLength = 15;
-        public static string nameChoice { get; set; } 
+        public static string nameChoice { get; set; }
         public static ArchType jobType { get; set; }
         public static string _Job;
         public static ArchSpecies SpeciesChoice { get; set; }
@@ -34,7 +34,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public static string _weapon1;
 
 
-        public static PC Player { get; set; }   
+        public static PC Player { get; set; }
         //m1
         public static void NameMyCharacter()
         {
@@ -47,14 +47,14 @@ namespace SummerSelfDirectedProjectConsoleRPG
                 Console.WriteLine($"Would you like to name your character (choice 1) or use default (choice 2){HUD.jobType.DefaultName}?");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 int choice = Convert.ToInt32(Console.ReadLine());
-              
+
                 if (choice == 1)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("What is your character's name");
                     Console.ForegroundColor = ConsoleColor.Blue;
                     nameChoice = Console.ReadLine();
-                  
+
                     while (true)
                     {
                         if (nameChoice.Length <= Program.MaxNameLLength) break;
@@ -101,7 +101,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         jobType = ArchType.Paladin;
                         _Job = "Paladin";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a Paladin, 'Stalward and true... With great power comes...SMITE!!!!!'");
+                        Console.WriteLine("You have chosen to be a Paladin,\n  \u001b[36m'Stalward and true... With great power comes...SMITE!!!!!' \u001b[33m");
                         SelectJob = true;
                         break;
 
@@ -109,7 +109,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         jobType = ArchType.Bard;
                         _Job = "Bard";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a Bard, 'I'm not the problem.... The story this would make is the problem...'");
+                        Console.WriteLine("You have chosen to be a Bard,\n  \u001b[36m'I'm not the problem.... The story this would make is the problem...' \u001b[33m");
                         SelectJob = true;
                         break;
 
@@ -117,7 +117,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         jobType = ArchType.Cleric;
                         _Job = "Cleric";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a Cleric, 'Oh Lawd give me the strngth to heal these nitwits....'");
+                        Console.WriteLine("You have chosen to be a Cleric,\n  \u001b[36m'Oh Lawd give me the strngth to heal these nitwits....' \u001b[33m");
                         SelectJob = true;
                         break;
 
@@ -125,7 +125,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         jobType = ArchType.Rogue;
                         _Job = "Rogue";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a Rogue , 'Sneaky, sneaky  Suggah...'");
+                        Console.WriteLine("You have chosen to be a Rogue,\n \u001b[36m'Sneaky, sneaky  Suggah...'\u001b[33m");
                         SelectJob = true;
                         break;
 
@@ -133,15 +133,15 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         jobType = ArchType.Ranger;
                         _Job = "Ranger";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a Ranger, 'Be Verry Verry quiet... I'm hunting Were-woofs.'");
+                        Console.WriteLine("You have chosen to be a Ranger,\n \u001b[36m'Be Verry Verry quiet... I'm hunting Were-woofs.'\u001b[33m");
                         SelectJob = true;
                         break;
 
                     case 6:
                         jobType = ArchType.Sorcerer;
-                        _Job = "Sorcerer";
+                        _Job = "Sorcerer"; 
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("You have chosen to be a Sorcerer, 'Phenomional Cosmic Power...About to be sued by Disney...'");
+                        Console.WriteLine("You have chosen to be a Sorcerer, \n \u001b[36m'Phenomional Cosmic Power...About to be sued by Disney...'v\u001b[33m");
                         SelectJob = true;
                         break;
 
@@ -153,7 +153,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
             }
 
 
-        
+
         }
 
 
@@ -185,7 +185,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                             SpeciesChoice = ArchSpecies.DragonKin;
                             _Species = "DragonKin";
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have chosen to be a DragonKin,\n 'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.'");
+                            Console.WriteLine("You have chosen to be a DragonKin,\n  \u001b[36m'I'm an ALL POWERFUL DRAGON!!!!..... No... Really.' \u001b[33m");
                             SelectSpecies = true;
                             break;
 
@@ -193,7 +193,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                             SpeciesChoice = ArchSpecies.DaemonKyne;
                             _Species = "DaemonKyne";
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have chosen to be a DaemonKyne,\n 'My parents? .....Well... It's complicated.'");
+                            Console.WriteLine("You have chosen to be a DaemonKyne,\n  \u001b[36m'My parents? .....Well... It's complicated.' \u001b[33m");
                             SelectSpecies = true;
                             break;
 
@@ -201,7 +201,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                             SpeciesChoice = ArchSpecies.Dwarf;
                             _Species = "Dwarf";
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have chosen to be a Dwarf,\n 'If ye Likem Hairy...I got whatcha want!'");
+                            Console.WriteLine("You have chosen to be a Dwarf,\n  \u001b[36m'If ye Likem Hairy...I got whatcha want!' \u001b[33m");
                             SelectSpecies = true;
                             break;
 
@@ -209,7 +209,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                             SpeciesChoice = ArchSpecies.Elf;
                             _Species = "Elf";
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have chosen to be a Elf,\n 'What do I see with your Elvish Eyes? You may not want to know...'");
+                            Console.WriteLine("You have chosen to be a Elf,\n  \u001b[36m'What do I see with your Elvish Eyes? You may not want to know...' \u001b[33m");
                             SelectSpecies = true;
                             break;
 
@@ -217,7 +217,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                             SpeciesChoice = ArchSpecies.Human;
                             _Species = "Human";
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have chosen to be a Human,\n 'I don't know why other Species get nervouse when I'm around...'");
+                            Console.WriteLine("You have chosen to be a Human,\n  \u001b[36m'I don't know why other Species get nervouse when I'm around...' \u001b[33m");
                             SelectSpecies = true;
                             break;
 
@@ -225,7 +225,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
                             SpeciesChoice = ArchSpecies.SmallFolk;
                             _Species = "SmallFolk";
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have chosen to be a SmallFolk,\n 'Hey... mind were you step please...no?.......YOINK!'");
+                            Console.WriteLine("You have chosen to be a SmallFolk,\n  \u001b[36m'Hey... mind were you step please...no?.......YOINK!' \u001b[33m");
                             SelectSpecies = true;
                             break;
 
@@ -255,10 +255,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         //m4
 
-        public static void StatBlock()
-        {
-
-        }
+       
 
         //m5
 
@@ -289,11 +286,11 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
         //m7
 
-       public static void PcCreatinConfirmation(PC Player)
+        public static void PcCreatinConfirmation(PC Player)
         {
             SpellSchool(Player);
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"--- Character Creation Complete ---");
+            Console.WriteLine($"-------------- Character Creation Complete --------------");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine($"Name: \u001b[36m{Player.Name}\u001b[33m  | (\u001b[36m{Player.ArcSpecies.Vision} Vision\u001b[33m)");
             Console.WriteLine($"Class: \u001b[36m{Player.ArcJob.JobTitle} \u001b[33mArchetype  | Player Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m");
@@ -304,7 +301,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
             Console.WriteLine($"Player Icon: \u001b[36m{Player._symbol} \u001b[33m | Icon Color: \u001b[36m{Player._color}\u001b[33m");
             Console.WriteLine($"Player Attack: \u001b[36m{Program.PlayerATK} \u001b[33m | Player Mana: \u001b[36m{Program.PlayerMP}\u001b[33m");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("-----------------------------------\n");
+            Console.WriteLine("--------------------------------------------------------\n");
         }
 
 
@@ -316,9 +313,9 @@ namespace SummerSelfDirectedProjectConsoleRPG
             Console.SetCursorPosition(60, 1);
             Console.Write($"\u001b[32m PLAYER STATS");
             Console.SetCursorPosition(60, 2);
-            Console.Write($"\u001b[33m Name: \u001b[36m{Player.Name}\u001b[33m |" );
+            Console.Write($"\u001b[33m Name: \u001b[36m{Player.Name}\u001b[33m |");
             Console.Write($"\u001b[33m Species: \u001b[36m{Player.ArcSpecies.SpeciesTitle}\u001b[33m |");
-            Console.Write($"\u001b[33m Profession: \u001b[36m{Player.ArcJob.JobTitle}\u001b[33m |" );
+            Console.Write($"\u001b[33m Profession: \u001b[36m{Player.ArcJob.JobTitle}\u001b[33m |");
             Console.SetCursorPosition(60, 3);
             Console.Write($"\u001b[33m HP: \u001b[36m{Program.PlayerHp}\u001b[33m |");
             Console.Write($"\u001b[33m MP: \u001b[36m{Program.PlayerMP}\u001b[33m |");
@@ -363,12 +360,12 @@ namespace SummerSelfDirectedProjectConsoleRPG
             //Console.ForegroundColor = ConsoleColor.Blue;
 
             //int SetAr1= Convert.ToInt32(Console.ReadLine());
-          
+
             //0 = no armor, 1= cloth, 2= leather, 3= chain, 4= plate, all other = default 
 
             while (!Armor1)
             {
-                
+
                 switch (SetAr1)
                 {
 
@@ -379,40 +376,40 @@ namespace SummerSelfDirectedProjectConsoleRPG
                         Console.WriteLine("You have removed your Armor... 'Nekkie, nekkie, eggs and baccie.");
                         Armor1 = true;
                         break;
-                   
+
                     case 1:
                         armor1Type = Armor.wornCloth;
                         _armor1 = "Cloth";
-                            Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("You have readied Cloth Armor...' Comefortable and warm...'");
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine("You have readied Cloth Armor...' Comefortable and warm...'");
                         Armor1 = true;
-                            break;
+                        break;
 
                     case 2:
-                    armor1Type = Armor.wornLeather;
-                    _armor1 = "Leather";
+                        armor1Type = Armor.wornLeather;
+                        _armor1 = "Leather";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine("You have  readied Lether Armor...'Stylish and rugged...'");
-                    Armor1 = true;
+                        Armor1 = true;
                         break;
 
                     case 3:
-                    armor1Type = Armor.wornChain;
-                    _armor1 = "Chain";
+                        armor1Type = Armor.wornChain;
+                        _armor1 = "Chain";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine("You have readied Chain Armor...'Classic protection...'");
-                    Armor1 = true;
+                        Armor1 = true;
                         break;
 
                     case 4:
-                    armor1Type = Armor.wornPlate;
-                    _armor1 = "Plate";
+                        armor1Type = Armor.wornPlate;
+                        _armor1 = "Plate";
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine("You have  readied Plate Armor...'Durable and strong, like a crab with a knofe...'");
-                    Armor1 = true;
+                        Armor1 = true;
                         break;
 
-                     
+
                     default:
 
                         if (HUD.jobType == ArchType.Paladin)
@@ -459,7 +456,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
             {
                 SpellSchool1 = "N/A";
             }
-                else if (Player.ArcJob.MagicType1 == 1)
+            else if (Player.ArcJob.MagicType1 == 1)
             {
                 SpellSchool1 = "Elemental";
             }
@@ -530,37 +527,133 @@ namespace SummerSelfDirectedProjectConsoleRPG
         {
             Console.SetCursorPosition(0, 30);
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("|--------------------- Info Block ----------------------|");
-           
+            Console.WriteLine("|-------------------------------------------------------------- Info Block ---------------------------------------------------------------|");
+
             Console.SetCursorPosition(0, 31);
-            Console.Write($"\u001b[33m You have encountered an enemy would you like to attack 1 or defend 2: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.Write($"\u001b[33m You have encountered an enemy would you like to Melee attack 1 Spell attack 2 or defend 3: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
             Console.SetCursorPosition(0, 32);
-            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($" 2\u001b[33m ");
             Console.SetCursorPosition(0, 33);
-            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.Write($"\u001b[33m You have chosen spell attack  are you casting a {SpellSchool1} 1 or {SpellSchool2} 2\x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.SetCursorPosition(0, 34);
-            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.Write($"1\u001b[33m |");
             Console.SetCursorPosition(0, 35);
-            Console.Write($"\u001b[33m Name: \x1b[38;2;255;165;0mPLACE HOLDER\u001b[33m |");
+            Console.Write($"\u001b[33m You can cast \x1b[38;2;255;165;125mlevel1 spell Name from selected school\u001b[33m |");
 
             Console.SetCursorPosition(0, 36);
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("+-------------------------------------------------------+");
+            Console.WriteLine("+-----------------------------------------------------------------------------------------------------------------------------------------+");
+
+
         }
 
+        //m13
+
+        public static void CombatOutput()
+        {
+
+            Console.SetCursorPosition(60, 12);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("|--------------------- combat output------------------------------------------|");
+
+            Console.SetCursorPosition(60, 13);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            Console.Write($"\u001b[33m You cast selected spell you hit targeted enemy for \x1b[38;2;255;165;0mDamage Value\u001b[33m |");
+
+            Console.SetCursorPosition(60, 14);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($" your attack roll is   attack output  it is .. greater than target enemy AC \u001b[33m ");
+
+            Console.SetCursorPosition(60, 15);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            Console.Write($"\u001b[33m target enemy takes  value amount of damage\x1b[38;2;255;165;0mEnemy counter attacks \u001b[33m |");
+            Console.ForegroundColor = ConsoleColor.Blue;
+
+            Console.SetCursorPosition(60, 16);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            Console.Write($"enemy attack value is less than your AC you take no dmage \u001b[33m |");
+
+            Console.SetCursorPosition(60, 17);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            //Console.Write($"\u001b[33m You can cast \x1b[38;2;255;165;125mlevel1 spell Name from selected school\u001b[33m |");
+
+            Console.SetCursorPosition(60, 18);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("+-----------------------------------------------------------------------------+");
+        }
+
+        //m14
+
+        public static void InventoryList()
+        {
+
+            Console.SetCursorPosition(60, 20);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("|--------------------- Player Inventory --------------------------------------|");
+
+            Console.SetCursorPosition(60, 21);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            Console.SetCursorPosition(65, 21);
+            Console.Write($"\x1b[38;2;255;165;125mArmor 1    |");
+            Console.SetCursorPosition(80, 21);
+            Console.Write($"\x1b[38;2;255;165;125mArmor 2    |");
+            Console.SetCursorPosition(95, 21);
+            Console.Write($"\x1b[38;2;255;165;125mWeapon 1    |");
+            Console.SetCursorPosition(110, 21);
+            Console.Write($"\x1b[38;2;255;165;125mConsumable    |");
+            Console.SetCursorPosition(125, 21);
+            Console.Write($"\x1b[38;2;255;165;125mKey Item    |");
 
 
+            Console.SetCursorPosition(60, 22);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            //Console.ForegroundColor = ConsoleColor.Blue;
+            //Console.Write($" your attack roll is   attack output  it is .. greater than target enemy AC \u001b[33m ");
+
+            Console.SetCursorPosition(60, 23);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            //Console.Write($"\u001b[33m target enemy takes  value amount of damage\x1b[38;2;255;165;0mEnemy counter attacks \u001b[33m |");
+            //Console.ForegroundColor = ConsoleColor.Blue;
+
+            Console.SetCursorPosition(60, 24);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            // Console.Write($"enemy attack value is less than your AC you take no dmage \u001b[33m |");
+
+            Console.SetCursorPosition(60, 25);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+            //Console.Write($"\u001b[33m You can cast \x1b[38;2;255;165;125mlevel1 spell Name from selected school\u001b[33m |");
+
+            Console.SetCursorPosition(60, 26);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+
+            Console.SetCursorPosition(60, 27);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("|");
+
+            Console.SetCursorPosition(60, 28);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("+-----------------------------------------------------------------------------+");
 
 
-
-
-
-
-
+        }
     }
-
-
 }
+
+
 
 
 

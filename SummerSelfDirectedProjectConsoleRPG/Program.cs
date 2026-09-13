@@ -98,7 +98,9 @@ namespace SummerSelfDirectedProjectConsoleRPG
            MapManager.map.DrawMap();
             HUD.PlayerStats(Player);
             HUD.EnemyStats();
-
+            HUD.CombatOutput();
+            HUD.InventoryList();
+            HUD.InfoBlock();
             HUD.Instructions();
             Console.ReadKey(true);
            
