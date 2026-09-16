@@ -650,7 +650,30 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
 
         }
-    }
+
+
+        //m15
+
+       public static void ResizeWarning()
+        {
+            Console.SetCursorPosition(25, 5);
+            Console.WriteLine(" hi the console window should be maximized. \n\n           If it is not, please Maximize screen at this time to avoid load errors");
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.SetCursorPosition(25, 7);
+            Console.WriteLine("Have you done it yet if yes good for you press a key.. \n\n           if not....\n \n        Shame on a thousand generatins of your family line..........and please maximise screen now. ");
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.SetCursorPosition(25, 11);
+            Console.WriteLine("Remember we warned you...");
+            Console.ReadKey(true);
+            Console.Clear();
+        }
+
+
+        }
 }
 
 

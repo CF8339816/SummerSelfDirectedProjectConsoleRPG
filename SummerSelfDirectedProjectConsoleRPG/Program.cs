@@ -35,14 +35,15 @@ namespace SummerSelfDirectedProjectConsoleRPG
         public ArchSpecies _ArchSpecies = HUD.SpeciesChoice;
 
         //  public static MapLoader map = new MapLoader();
+
         #region forced Maximize Startup
         [DllImport("user32.dll")]
         private static extern IntPtr GetForegroundWindow();
 
         [DllImport("user32.dll")]
-        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow); //Define the 'Maximize' command constant
 
-        // 2. Define the 'Maximize' command constant
+  
         private const int SW_RESTORE = 9;   // Unlocks the layout constraints
         private const int SW_MAXIMIZE = 3;
         #endregion
@@ -51,7 +52,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
         {
 
             #region Startup Maxixization
-            Thread.Sleep(50);
+            Thread.Sleep(50);//does a little delay on startup to process the screen resize
             IntPtr handle = GetForegroundWindow();
             if (handle != IntPtr.Zero)
             {
@@ -61,22 +62,8 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
             #endregion
 
-            Console.SetCursorPosition(25, 5);
-            Console.WriteLine(" hi the console window should be maximized. \n\n           If it is not, please Maximize screen at this time to avoid load errors");
-            Console.ReadKey(true);
-            Console.Clear();
-
-            Console.SetCursorPosition(25,7);
-            Console.WriteLine("Have you done it yet if yes good for you press a key.. \n\n           if not....\n \n        Shame on a thousand generatins of your family line..........and please maximise screen now. ");
-            Console.ReadKey(true);
-            Console.Clear();
-
-            Console.SetCursorPosition(25, 11);
-            Console.WriteLine("Remember we warned you...");
-            Console.ReadKey(true);
-            Console.Clear();
-
-
+           
+            HUD.ResizeWarning();
 
             HUD.ChooseMyClass();
             HUD.ChooseMySpecies();
