@@ -572,13 +572,15 @@ namespace SummerSelfDirectedProjectConsoleRPG
             Console.SetCursorPosition(60, 15);
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write("|");
+           // Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write($"\u001b[33m target enemy takes  value amount of damage\x1b[38;2;255;165;0mEnemy counter attacks \u001b[33m |");
-            Console.ForegroundColor = ConsoleColor.Blue;
+            
 
             Console.SetCursorPosition(60, 16);
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write("|");
-            Console.Write($"enemy attack value is less than your AC you take no dmage \u001b[33m |");
+
+            Console.Write($"\u001b[33m enemy attack value is less than your AC you take no dmage \u001b[33m |");
 
             Console.SetCursorPosition(60, 17);
             Console.ForegroundColor = ConsoleColor.Gray;
