@@ -556,7 +556,7 @@ namespace SummerSelfDirectedProjectConsoleRPG
 
             Console.SetCursorPosition(60, 12);
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("|--------------------- combat output------------------------------------------|");
+            Console.WriteLine("|--------------------- Combat Output------------------------------------------|");
 
             Console.SetCursorPosition(60, 13);
             Console.ForegroundColor = ConsoleColor.Gray;
